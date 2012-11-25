@@ -5,7 +5,7 @@ Apache License, Version 2.0
 
 ## REQUIREMENTS
 * PHP >= 5.3
-* 7-Zip commandline tool (verion > 9.25 alpha suggested)
+* 7-Zip commandline tool (version > 9.25 alpha suggested)
 
 ## Tested on
 * Windows 7
