@@ -8,8 +8,8 @@
         <?php
             error_reporting(E_ALL);
         
-            //require_once 'eu/maxschuster/sevenzip/inc.sevenzip.php';
-            require_once 'SevenZipArchive.phar';
+            require_once 'eu/maxschuster/sevenzip/inc.sevenzip.php';
+            //require_once 'SevenZipArchive.phar';
             
             @unlink('test/create.7z');
             
@@ -23,7 +23,11 @@
             $zip->addFileFromString('fromStr.txt', 'Funzt :-D  #&;`|*?~<>^()[]{}$\, \\x0A and \\xFF. \'');
             $zip->addFileFromString('fromStr2.txt', 'Funzt :-D  #&;`|*?~<>^()[]{}$\, \\x0A and \\xFF. \'');
             $zip->addFileFromString('torename.txt', 'Funzt :-D  #&;`|*?~<>^()[]{}$\, \\x0A and \\xFF. \'');
-            $zip->renameName('torename.txt', 'renamed.txt');
+            try {
+                $zip->renameName('torename.txt', 'renamed.txt');
+            } catch (eu\maxschuster\sevenzip\exception\SevenZipException $ex) {
+                var_dump('renameing faild! maybe its not supported?');
+            }
             var_dump($zip->getFromName('test/test.txt'));
             
             var_dump($zip->listArchive());

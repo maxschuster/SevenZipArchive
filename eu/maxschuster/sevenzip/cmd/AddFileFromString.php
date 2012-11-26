@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Contains class AddFileFromString
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 

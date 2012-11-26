@@ -1,0 +1,1118 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>SevenZipArchive » \eu\maxschuster\sevenzip\cmd\TestArchive</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">SevenZipArchive</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eu.html"><i class="icon-th"></i> eu</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/sevenziparchive.html"><i class="icon-folder-open"></i> sevenziparchive</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: Command constructor"><span class="description">Command constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_execute" title="execute :: Executs the command"><span class="description">Executs the command</span><pre>execute()</pre></a></li>
+<li class="method public inherited"><a href="#method_getBaseArchiveFile" title="getBaseArchiveFile :: Gets the base archive file"><span class="description">Gets the base archive file</span><pre>getBaseArchiveFile()</pre></a></li>
+<li class="method public inherited"><a href="#method_getEncryptArchiveHeaders" title="getEncryptArchiveHeaders :: Encrypt archive headers"><span class="description">Encrypt archive headers</span><pre>getEncryptArchiveHeaders()</pre></a></li>
+<li class="method public inherited"><a href="#method_getExecutable" title="getExecutable :: Gets the current 7-Zip executable file"><span class="description">Gets the current 7-Zip executable file</span><pre>getExecutable()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLastOutput" title="getLastOutput :: Gets the last generated output as array"><span class="description">Gets the last generated output as array</span><pre>getLastOutput()</pre></a></li>
+<li class="method public "><a href="#method_getLastResult" title="getLastResult :: Gets the last result"><span class="description">Gets the last result</span><pre>getLastResult()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLastReturnVar" title="getLastReturnVar :: Gets the last generated return var"><span class="description">Gets the last generated return var</span><pre>getLastReturnVar()</pre></a></li>
+<li class="method public inherited"><a href="#method_getPassword" title="getPassword :: Gets the current password"><span class="description">Gets the current password</span><pre>getPassword()</pre></a></li>
+<li class="method public inherited"><a href="#method_getPasswordSwitches" title="getPasswordSwitches :: Gets the right password switches for this command"><span class="description">Gets the right password switches for this command</span><pre>getPasswordSwitches()</pre></a></li>
+<li class="method public inherited"><a href="#method_hasPassword" title="hasPassword :: Checks if a password was set."><span class="description">Checks if a password was set.</span><pre>hasPassword()</pre></a></li>
+<li class="method public inherited"><a href="#method_isExecutable" title="isExecutable :: This function checks if the given file was included to the PATH env
+variable and if it is executable."><span class="description">This function checks if the given file was included to the PATH env
+variable and if it is executable.</span><pre>isExecutable()</pre></a></li>
+<li class="method public inherited"><a href="#method_setBaseArchiveFile" title="setBaseArchiveFile :: Sets the base archive file"><span class="description">Sets the base archive file</span><pre>setBaseArchiveFile()</pre></a></li>
+<li class="method public inherited"><a href="#method_setEncryptArchiveHeaders" title="setEncryptArchiveHeaders :: Encrypt archive headers"><span class="description">Encrypt archive headers</span><pre>setEncryptArchiveHeaders()</pre></a></li>
+<li class="method public inherited"><a href="#method_setExecutable" title="setExecutable :: Sets the 7-Zip executable file"><span class="description">Sets the 7-Zip executable file</span><pre>setExecutable()</pre></a></li>
+<li class="method public inherited"><a href="#method_setPassword" title="setPassword :: Sets a new password"><span class="description">Sets a new password</span><pre>setPassword()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_getCommand" title="getCommand :: Gets the command"><span class="description">Gets the command</span><pre>getCommand()</pre></a></li>
+<li class="method protected inherited"><a href="#method_setLastOutput" title="setLastOutput :: Sets the last generated output"><span class="description">Sets the last generated output</span><pre>setLastOutput()</pre></a></li>
+<li class="method protected inherited"><a href="#method_setLastReturnVar" title="setLastReturnVar :: Sets the last generated return var"><span class="description">Sets the last generated return var</span><pre>setLastReturnVar()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_baseArchiveFile" title="$baseArchiveFile :: Base archive file"><span class="description">Base archive file</span><pre>$baseArchiveFile</pre></a></li>
+<li class="property protected inherited"><a href="#property_encryptArchiveHeaders" title="$encryptArchiveHeaders :: Encrypt archive headers (-mhe switch),
+so filenames will be encrypted."><span class="description">Encrypt archive headers (-mhe switch),
+so filenames will be encrypted.</span><pre>$encryptArchiveHeaders</pre></a></li>
+<li class="property protected inherited"><a href="#property_executable" title="$executable :: Path to 7-Zip executable file"><span class="description">Path to 7-Zip executable file</span><pre>$executable</pre></a></li>
+<li class="property protected inherited"><a href="#property_isCmdCache" title="$isCmdCache :: Array to cache isCmd results"><span class="description">Array to cache isCmd results</span><pre>$isCmdCache</pre></a></li>
+<li class="property protected inherited"><a href="#property_lastOutput" title="$lastOutput :: Contains the last generated output"><span class="description">Contains the last generated output</span><pre>$lastOutput</pre></a></li>
+<li class="property protected inherited"><a href="#property_lastReturnVar" title="$lastReturnVar :: Last return value"><span class="description">Last return value</span><pre>$lastReturnVar</pre></a></li>
+<li class="property protected inherited"><a href="#property_password" title="$password :: Password."><span class="description">Password.</span><pre>$password</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  inherited"><a href="#constant_CMD_ADD" title="CMD_ADD :: Adds files to archive."><span class="description">Adds files to archive.</span><pre>CMD_ADD</pre></a></li>
+<li class="constant  inherited"><a href="#constant_CMD_BENCHMARK" title="CMD_BENCHMARK :: Measures speed of the CPU and checks
+RAM for errors."><span class="description">Measures speed of the CPU and checks
+RAM for errors.</span><pre>CMD_BENCHMARK</pre></a></li>
+<li class="constant  inherited"><a href="#constant_CMD_DELETE" title="CMD_DELETE :: Deletes files from archive."><span class="description">Deletes files from archive.</span><pre>CMD_DELETE</pre></a></li>
+<li class="constant  inherited"><a href="#constant_CMD_EXTRACT" title="CMD_EXTRACT :: Extracts files from an archive to the
+current directory or to the output
+directory."><span class="description">Extracts files from an archive to the
+current directory or to the output
+directory.</span><pre>CMD_EXTRACT</pre></a></li>
+<li class="constant  inherited"><a href="#constant_CMD_EXTRACT_WITH_FULL_PATHS" title="CMD_EXTRACT_WITH_FULL_PATHS :: Extracts files from an archive with their full
+paths in the current directory, or in an output
+directory if specified."><span class="description">Extracts files from an archive with their full
+paths in the current directory, or in an output
+directory if specified.</span><pre>CMD_EXTRACT_WITH_FULL_PATHS</pre></a></li>
+<li class="constant  inherited"><a href="#constant_CMD_LIST" title="CMD_LIST :: Lists contents of archive."><span class="description">Lists contents of archive.</span><pre>CMD_LIST</pre></a></li>
+<li class="constant  inherited"><a href="#constant_CMD_RENAME" title="CMD_RENAME :: Renames file inside archive"><span class="description">Renames file inside archive</span><pre>CMD_RENAME</pre></a></li>
+<li class="constant  inherited"><a href="#constant_CMD_TEST" title="CMD_TEST :: Tests archive files."><span class="description">Tests archive files.</span><pre>CMD_TEST</pre></a></li>
+<li class="constant  inherited"><a href="#constant_CMD_UPDATE" title="CMD_UPDATE :: Update older files in the archive and add files
+that are not already in the archive."><span class="description">Update older files in the archive and add files
+that are not already in the archive.</span><pre>CMD_UPDATE</pre></a></li>
+<li class="constant  inherited"><a href="#constant_EXIT_COMMAND_LINE_ERROR" title="EXIT_COMMAND_LINE_ERROR :: Command line error"><span class="description">Command line error</span><pre>EXIT_COMMAND_LINE_ERROR</pre></a></li>
+<li class="constant  inherited"><a href="#constant_EXIT_FATAL_ERROR" title="EXIT_FATAL_ERROR :: Fatal error"><span class="description">Fatal error</span><pre>EXIT_FATAL_ERROR</pre></a></li>
+<li class="constant  inherited"><a href="#constant_EXIT_NOT_ENOUGH_MEMORY" title="EXIT_NOT_ENOUGH_MEMORY :: Not enough memory for operation"><span class="description">Not enough memory for operation</span><pre>EXIT_NOT_ENOUGH_MEMORY</pre></a></li>
+<li class="constant  inherited"><a href="#constant_EXIT_NO_ERROR" title="EXIT_NO_ERROR :: No error"><span class="description">No error</span><pre>EXIT_NO_ERROR</pre></a></li>
+<li class="constant  inherited"><a href="#constant_EXIT_USER_STOPED_PROCESS" title="EXIT_USER_STOPED_PROCESS :: User stopped the process"><span class="description">User stopped the process</span><pre>EXIT_USER_STOPED_PROCESS</pre></a></li>
+<li class="constant  inherited"><a href="#constant_EXIT_WARNING" title="EXIT_WARNING :: Warning (Non fatal error(s))."><span class="description">Warning (Non fatal error(s)).</span><pre>EXIT_WARNING</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\eu\maxschuster\sevenzip\cmd\TestArchive"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eu.html">eu</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eu.maxschuster.html">maxschuster</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eu.maxschuster.sevenzip.html">sevenzip</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eu.maxschuster.sevenzip.cmd.html">cmd</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eu.maxschuster.sevenzip.cmd.TestArchive.html">TestArchive</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">7-Zip command to test an existing Archive</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:dev@maxschuster.eu">Max Schuster</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>(c) 2012, Max Schuster</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/sevenziparchive.html">sevenziparchive</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Command constructor</h2>
+<pre>__construct(string $executable) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::__construct()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::__construct()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::__construct()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$executable</h4>
+<code>string</code><p>Path to the executable</p></div>
+</div></div>
+</div>
+<a id="method_execute"></a><div class="element clickable method public method_execute" data-toggle="collapse" data-target=".method_execute .collapse">
+<h2>Executs the command</h2>
+<pre>execute() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns the exit
+code if it was possible to execute this
+command. Otherwise it will throw an
+Exception.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eu.maxschuster.sevenzip.exception.SevenZipException.html">\eu\maxschuster\sevenzip\exception\SevenZipException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>No error</div>
+</div></div>
+</div>
+<a id="method_getBaseArchiveFile"></a><div class="element clickable method public method_getBaseArchiveFile" data-toggle="collapse" data-target=".method_getBaseArchiveFile .collapse">
+<h2>Gets the base archive file</h2>
+<pre>getBaseArchiveFile() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::getBaseArchiveFile()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::getBaseArchiveFile()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Base archive file</div>
+</div></div>
+</div>
+<a id="method_getEncryptArchiveHeaders"></a><div class="element clickable method public method_getEncryptArchiveHeaders" data-toggle="collapse" data-target=".method_getEncryptArchiveHeaders .collapse">
+<h2>Encrypt archive headers</h2>
+<pre>getEncryptArchiveHeaders() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::getEncryptArchiveHeaders()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Encrypt archive headers</div>
+</div></div>
+</div>
+<a id="method_getExecutable"></a><div class="element clickable method public method_getExecutable" data-toggle="collapse" data-target=".method_getExecutable .collapse">
+<h2>Gets the current 7-Zip executable file</h2>
+<pre>getExecutable() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::getExecutable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::getExecutable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::getExecutable()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>7-Zip executable file</div>
+</div></div>
+</div>
+<a id="method_getLastOutput"></a><div class="element clickable method public method_getLastOutput" data-toggle="collapse" data-target=".method_getLastOutput .collapse">
+<h2>Gets the last generated output as array</h2>
+<pre>getLastOutput() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::getLastOutput()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::getLastOutput()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::getLastOutput()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Last generated output</div>
+</div></div>
+</div>
+<a id="method_getLastResult"></a><div class="element clickable method public method_getLastResult" data-toggle="collapse" data-target=".method_getLastResult .collapse">
+<h2>Gets the last result</h2>
+<pre>getLastResult() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>Result</div>
+</div></div>
+</div>
+<a id="method_getLastReturnVar"></a><div class="element clickable method public method_getLastReturnVar" data-toggle="collapse" data-target=".method_getLastReturnVar .collapse">
+<h2>Gets the last generated return var</h2>
+<pre>getLastReturnVar() : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::getLastReturnVar()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::getLastReturnVar()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::getLastReturnVar()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Last generated return var</div>
+</div></div>
+</div>
+<a id="method_getPassword"></a><div class="element clickable method public method_getPassword" data-toggle="collapse" data-target=".method_getPassword .collapse">
+<h2>Gets the current password</h2>
+<pre>getPassword() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::getPassword()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Current password</div>
+</div></div>
+</div>
+<a id="method_getPasswordSwitches"></a><div class="element clickable method public method_getPasswordSwitches" data-toggle="collapse" data-target=".method_getPasswordSwitches .collapse">
+<h2>Gets the right password switches for this command</h2>
+<pre>getPasswordSwitches() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::getPasswordSwitches()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Password switches</div>
+</div></div>
+</div>
+<a id="method_hasPassword"></a><div class="element clickable method public method_hasPassword" data-toggle="collapse" data-target=".method_hasPassword .collapse">
+<h2>Checks if a password was set.</h2>
+<pre>hasPassword() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::hasPassword()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Has password</div>
+</div></div>
+</div>
+<a id="method_isExecutable"></a><div class="element clickable method public method_isExecutable" data-toggle="collapse" data-target=".method_isExecutable .collapse">
+<h2>This function checks if the given file was included to the PATH env
+variable and if it is executable.</h2>
+<pre>isExecutable(string $file) : boolean</pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>I have found this function in
+Andrew Moores post on stackoverflow.com and I added a few small changes.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>link</th>
+<td><a href="http://stackoverflow.com/questions/2994679/how-to-check-an-exectuables-path-is-correct-in-php#answer-2994750">http://stackoverflow.com/questions/2994679/how-to-check-an-exectuables-path-is-correct-in-php#answer-2994750</a></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::isExecutable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::isExecutable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::isExecutable()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>string</code><p>Name of the executable</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>Is executable</div>
+</div></div>
+</div>
+<a id="method_setBaseArchiveFile"></a><div class="element clickable method public method_setBaseArchiveFile" data-toggle="collapse" data-target=".method_setBaseArchiveFile .collapse">
+<h2>Sets the base archive file</h2>
+<pre>setBaseArchiveFile(string $baseArchiveFile) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::setBaseArchiveFile()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::setBaseArchiveFile()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$baseArchiveFile</h4>
+<code>string</code><p>Base archive file</p></div>
+</div></div>
+</div>
+<a id="method_setEncryptArchiveHeaders"></a><div class="element clickable method public method_setEncryptArchiveHeaders" data-toggle="collapse" data-target=".method_setEncryptArchiveHeaders .collapse">
+<h2>Encrypt archive headers</h2>
+<pre>setEncryptArchiveHeaders(bool $encryptArchiveHeaders) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::setEncryptArchiveHeaders()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$encryptArchiveHeaders</h4>
+<code>bool</code><p>Encrypt archive headers</p></div>
+</div></div>
+</div>
+<a id="method_setExecutable"></a><div class="element clickable method public method_setExecutable" data-toggle="collapse" data-target=".method_setExecutable .collapse">
+<h2>Sets the 7-Zip executable file</h2>
+<pre>setExecutable(string $executable, bool $trust) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::setExecutable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::setExecutable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::setExecutable()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$executable</h4>
+<code>string</code><p>7-Zip executable file</p>
+</div>
+<div class="subelement argument">
+<h4>$trust</h4>
+<code>bool</code><p>Trust the executable without checking</p></div>
+</div></div>
+</div>
+<a id="method_setPassword"></a><div class="element clickable method public method_setPassword" data-toggle="collapse" data-target=".method_setPassword .collapse">
+<h2>Sets a new password</h2>
+<pre>setPassword(string $password) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::setPassword()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code><p>New password</p></div>
+</div></div>
+</div>
+<a id="method_getCommand"></a><div class="element clickable method protected method_getCommand" data-toggle="collapse" data-target=".method_getCommand .collapse">
+<h2>Gets the command</h2>
+<pre>getCommand() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Command</div>
+</div></div>
+</div>
+<a id="method_setLastOutput"></a><div class="element clickable method protected method_setLastOutput" data-toggle="collapse" data-target=".method_setLastOutput .collapse">
+<h2>Sets the last generated output</h2>
+<pre>setLastOutput(array $lastOutput) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::setLastOutput()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::setLastOutput()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::setLastOutput()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lastOutput</h4>
+<code>array</code><p>Last generated output</p></div>
+</div></div>
+</div>
+<a id="method_setLastReturnVar"></a><div class="element clickable method protected method_setLastReturnVar" data-toggle="collapse" data-target=".method_setLastReturnVar .collapse">
+<h2>Sets the last generated return var</h2>
+<pre>setLastReturnVar(int $lastReturnVar) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::setLastReturnVar()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::setLastReturnVar()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::setLastReturnVar()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lastReturnVar</h4>
+<code>int</code><p>Last generated return var</p></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_baseArchiveFile"> </a><div class="element clickable property protected property_baseArchiveFile" data-toggle="collapse" data-target=".property_baseArchiveFile .collapse">
+<h2>Base archive file</h2>
+<pre>$baseArchiveFile : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::$$baseArchiveFile</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::$$baseArchiveFile</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_encryptArchiveHeaders"> </a><div class="element clickable property protected property_encryptArchiveHeaders" data-toggle="collapse" data-target=".property_encryptArchiveHeaders .collapse">
+<h2>Encrypt archive headers (-mhe switch),
+so filenames will be encrypted.</h2>
+<pre>$encryptArchiveHeaders : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::$$encryptArchiveHeaders</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_executable"> </a><div class="element clickable property protected property_executable" data-toggle="collapse" data-target=".property_executable .collapse">
+<h2>Path to 7-Zip executable file</h2>
+<pre>$executable : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::$$executable</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::$$executable</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::$$executable</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_isCmdCache"> </a><div class="element clickable property protected property_isCmdCache" data-toggle="collapse" data-target=".property_isCmdCache .collapse">
+<h2>Array to cache isCmd results</h2>
+<pre>$isCmdCache : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::$$isCmdCache</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::$$isCmdCache</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::$$isCmdCache</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_lastOutput"> </a><div class="element clickable property protected property_lastOutput" data-toggle="collapse" data-target=".property_lastOutput .collapse">
+<h2>Contains the last generated output</h2>
+<pre>$lastOutput : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::$$lastOutput</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::$$lastOutput</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::$$lastOutput</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_lastReturnVar"> </a><div class="element clickable property protected property_lastReturnVar" data-toggle="collapse" data-target=".property_lastReturnVar .collapse">
+<h2>Last return value</h2>
+<pre>$lastReturnVar : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::$$lastReturnVar</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::$$lastReturnVar</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::$$lastReturnVar</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_password"> </a><div class="element clickable property protected property_password" data-toggle="collapse" data-target=".property_password .collapse">
+<h2>Password.</h2>
+<pre>$password : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Value for switch "-p"</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::$$password</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_CMD_ADD"> </a><div class="element clickable constant  constant_CMD_ADD" data-toggle="collapse" data-target=".constant_CMD_ADD .collapse">
+<h2>Adds files to archive.</h2>
+<pre>CMD_ADD </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_ADD</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_ADD</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_ADD</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_ADD</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_CMD_BENCHMARK"> </a><div class="element clickable constant  constant_CMD_BENCHMARK" data-toggle="collapse" data-target=".constant_CMD_BENCHMARK .collapse">
+<h2>Measures speed of the CPU and checks
+RAM for errors.</h2>
+<pre>CMD_BENCHMARK </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_BENCHMARK</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_BENCHMARK</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_BENCHMARK</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_BENCHMARK</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_CMD_DELETE"> </a><div class="element clickable constant  constant_CMD_DELETE" data-toggle="collapse" data-target=".constant_CMD_DELETE .collapse">
+<h2>Deletes files from archive.</h2>
+<pre>CMD_DELETE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_DELETE</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_DELETE</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_DELETE</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_DELETE</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_CMD_EXTRACT"> </a><div class="element clickable constant  constant_CMD_EXTRACT" data-toggle="collapse" data-target=".constant_CMD_EXTRACT .collapse">
+<h2>Extracts files from an archive to the
+current directory or to the output
+directory.</h2>
+<pre>CMD_EXTRACT </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_EXTRACT</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_EXTRACT</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_EXTRACT</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_EXTRACT</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_CMD_EXTRACT_WITH_FULL_PATHS"> </a><div class="element clickable constant  constant_CMD_EXTRACT_WITH_FULL_PATHS" data-toggle="collapse" data-target=".constant_CMD_EXTRACT_WITH_FULL_PATHS .collapse">
+<h2>Extracts files from an archive with their full
+paths in the current directory, or in an output
+directory if specified.</h2>
+<pre>CMD_EXTRACT_WITH_FULL_PATHS </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_EXTRACT_WITH_FULL_PATHS</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_EXTRACT_WITH_FULL_PATHS</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_EXTRACT_WITH_FULL_PATHS</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_EXTRACT_WITH_FULL_PATHS</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_CMD_LIST"> </a><div class="element clickable constant  constant_CMD_LIST" data-toggle="collapse" data-target=".constant_CMD_LIST .collapse">
+<h2>Lists contents of archive.</h2>
+<pre>CMD_LIST </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_LIST</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_LIST</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_LIST</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_LIST</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_CMD_RENAME"> </a><div class="element clickable constant  constant_CMD_RENAME" data-toggle="collapse" data-target=".constant_CMD_RENAME .collapse">
+<h2>Renames file inside archive</h2>
+<pre>CMD_RENAME </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_RENAME</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_RENAME</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_RENAME</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_RENAME</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_CMD_TEST"> </a><div class="element clickable constant  constant_CMD_TEST" data-toggle="collapse" data-target=".constant_CMD_TEST .collapse">
+<h2>Tests archive files.</h2>
+<pre>CMD_TEST </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_TEST</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_TEST</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_TEST</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_TEST</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_CMD_UPDATE"> </a><div class="element clickable constant  constant_CMD_UPDATE" data-toggle="collapse" data-target=".constant_CMD_UPDATE .collapse">
+<h2>Update older files in the archive and add files
+that are not already in the archive.</h2>
+<pre>CMD_UPDATE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: the updating of solid .7z archives can be
+slow, since it can require some recompression.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>CMD_UPDATE</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::CMD_UPDATE</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::CMD_UPDATE</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::CMD_UPDATE</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_EXIT_COMMAND_LINE_ERROR"> </a><div class="element clickable constant  constant_EXIT_COMMAND_LINE_ERROR" data-toggle="collapse" data-target=".constant_EXIT_COMMAND_LINE_ERROR .collapse">
+<h2>Command line error</h2>
+<pre>EXIT_COMMAND_LINE_ERROR </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>EXIT_COMMAND_LINE_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::EXIT_COMMAND_LINE_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::EXIT_COMMAND_LINE_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::EXIT_COMMAND_LINE_ERROR</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_EXIT_FATAL_ERROR"> </a><div class="element clickable constant  constant_EXIT_FATAL_ERROR" data-toggle="collapse" data-target=".constant_EXIT_FATAL_ERROR .collapse">
+<h2>Fatal error</h2>
+<pre>EXIT_FATAL_ERROR </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>EXIT_FATAL_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::EXIT_FATAL_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::EXIT_FATAL_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::EXIT_FATAL_ERROR</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_EXIT_NOT_ENOUGH_MEMORY"> </a><div class="element clickable constant  constant_EXIT_NOT_ENOUGH_MEMORY" data-toggle="collapse" data-target=".constant_EXIT_NOT_ENOUGH_MEMORY .collapse">
+<h2>Not enough memory for operation</h2>
+<pre>EXIT_NOT_ENOUGH_MEMORY </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>EXIT_NOT_ENOUGH_MEMORY</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::EXIT_NOT_ENOUGH_MEMORY</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::EXIT_NOT_ENOUGH_MEMORY</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::EXIT_NOT_ENOUGH_MEMORY</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_EXIT_NO_ERROR"> </a><div class="element clickable constant  constant_EXIT_NO_ERROR" data-toggle="collapse" data-target=".constant_EXIT_NO_ERROR .collapse">
+<h2>No error</h2>
+<pre>EXIT_NO_ERROR </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>EXIT_NO_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::EXIT_NO_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::EXIT_NO_ERROR</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::EXIT_NO_ERROR</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_EXIT_USER_STOPED_PROCESS"> </a><div class="element clickable constant  constant_EXIT_USER_STOPED_PROCESS" data-toggle="collapse" data-target=".constant_EXIT_USER_STOPED_PROCESS .collapse">
+<h2>User stopped the process</h2>
+<pre>EXIT_USER_STOPED_PROCESS </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>EXIT_USER_STOPED_PROCESS</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::EXIT_USER_STOPED_PROCESS</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::EXIT_USER_STOPED_PROCESS</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::EXIT_USER_STOPED_PROCESS</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_EXIT_WARNING"> </a><div class="element clickable constant  constant_EXIT_WARNING" data-toggle="collapse" data-target=".constant_EXIT_WARNING .collapse">
+<h2>Warning (Non fatal error(s)).</h2>
+<pre>EXIT_WARNING </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>For example,
+one or more files were locked by some other
+application, so they were not compressed.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>const</th>
+<td>EXIT_WARNING</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\SevenZipCommand::EXIT_WARNING</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand::EXIT_WARNING</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand::EXIT_WARNING</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-11-26T10:16:59+01:00.<br></footer></div>
+</div>
+</body>
+</html>

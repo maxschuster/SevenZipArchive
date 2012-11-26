@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Contains interface CommandInterface
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 

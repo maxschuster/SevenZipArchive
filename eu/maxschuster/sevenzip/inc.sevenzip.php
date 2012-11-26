@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Main include file for SevenZipArchive
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 

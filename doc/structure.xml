@@ -1,0 +1,2113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="SevenZipArchive">
+  <file path="cmd/AddFile.php" hash="4fdc9a58587a45a5d73fe796875703b5" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class AddFile]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\cmd" line="33" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</extends>
+      <name>AddFile</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\AddFile</full_name>
+      <docblock line="26">
+        <description><![CDATA[Command to add a file to the archive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="26" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="26" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="26" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="39" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$filename</name>
+        <default><![CDATA[]]></default>
+        <docblock line="35">
+          <description><![CDATA[File to add]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="45" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$localname</name>
+        <default><![CDATA[NULL]]></default>
+        <docblock line="41">
+          <description><![CDATA[Name of the file inside the archive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="51" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="47">
+          <description><![CDATA[Gets the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="47" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="68" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="64">
+          <description><![CDATA[Gets the last result]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="64" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="76" package="sevenziparchive">
+        <name>getFilename</name>
+        <full_name>getFilename</full_name>
+        <docblock line="72">
+          <description><![CDATA[Get filename]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="72" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="84" package="sevenziparchive">
+        <name>setFilename</name>
+        <full_name>setFilename</full_name>
+        <docblock line="80">
+          <description><![CDATA[Set filename]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="80" name="param" description="" type="string" variable="$filename">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="84">
+          <name>$filename</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="92" package="sevenziparchive">
+        <name>getLocalname</name>
+        <full_name>getLocalname</full_name>
+        <docblock line="88">
+          <description><![CDATA[Get localname]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="88" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="100" package="sevenziparchive">
+        <name>setLocalname</name>
+        <full_name>setLocalname</full_name>
+        <docblock line="96">
+          <description><![CDATA[Set localname]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="96" name="param" description="" type="string" variable="$localname">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="100">
+          <name>$localname</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>eJydVW1v4kYQ/h4p/2GK+AARgWs+huQSLpDWKmdOmNz1qkjRsh7sVe21u7vmpdX995v1C2CgybVGInh29plnnn12cnOXhun52flZ7+Li/Awu4CGRhgmpgUdMaxj4/qOIMF+6Txn/kwUIHi5R/iHSgeKhWOaLvQKjhEg3SgShgat3P1/BR7YGj4eZNqggT8i/xoKj1OhDJn1aMCHCgArQn3KlA59RaZFIuOq+g5ZNaJRLjXY/x9gkGcRsAzIxkGkkEKFhQXwB1xxTA0ICT+I0EkxyhJUwYV6ohOnmIF9LkGRuGwdGO1J6W+xnAjM2N8+3T2hMet3rrVarLstJdxMV9KIiWffGzsPI9UaXRHy77UlGSIIq/CsTitqeb4ClxIyzOfGN2AoSBSxQSGsmscxXShghgw7oZGFWTBWn4AttlJhnpiZdxZP6308g8ZiExsADx2vAh4HneJ0c5Ysz+3XyNIMvg+l04M6ckQeTKTxM3KEzcyYuvT3CwP0KvznusANIwlEhXKfK9kBEhRUV/UJBD7FGYpEUpHSKXCwEp+5kkFnnBMkSlaSmIEUVC22PVxNFP8eJRCwMM3nsqLXu1maSxahJdTrl7Dlma12a61lbX/4t0mce+/26qeOYilhdme/TEeceoTeLz3YuLmzOMhNSBzXf3vi4vN+r1cXsfZHNt25v8Xbu+E5ta/3qVBRZ7erU7hrJbFD6Gj5RcJUo/5NKDHI6zqqNf2xv1oZFf/a5gMeyJWpwG7tfMgXWDTKoYr3iR1phQtNqYSXtFyvHyC4tVvchF47Gg/DxQLz/UDFKOItsSbgF92k87p/q5xc0Oi/Bi653JRSaTMm3qiwyya2VIEBTCtdq76SzT0EE3YIJas5S1CFGEVNB6yeMU7NpNe1MuXy/pdyGOziMwXUVqrRs9/eq2ODpGgpZlDITtg63t/s1nuRn2lwmUT+jNfLM2MFBLXWhQZ/uLr16NEaL6+uHj8OXwXBYpe2hfGAayxFuzVNCXW5Oo+32Vb70aJ7S6NOvcWhcapFX3ZPaJt8UXCppau2W59ssbrGNfHvVIHR5DG3SWWSOTDJPkgiZPHRJNqfBW7PImECmOUbhkkMy2+6LRBv8zBTl3t7elkqPfndmL+7kZTSdTqZvMIfqqH/Q1seEH0uA1+geXO2TZLyTZGhAsbjkshsRb7DSe6y2e2r0DnhZU/8IRyvY9rb9b8XGFcJrkm3LvKXZCT510Y4S/l21HbPm3qA51m1/cDZPMs2/7uhf03fld9JJ</source>
+  </file>
+  <file path="cmd/AddFileFromString.php" hash="e659960f3c69f3ff80000206483e8837" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class AddFileFromString]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="SevenZipException">eu\maxschuster\sevenzip\exception\SevenZipException</namespace-alias>
+    <namespace-alias name="SevenZipArchive">eu\maxschuster\sevenzip\SevenZipArchive</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\cmd" line="35" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</extends>
+      <name>AddFileFromString</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\AddFileFromString</full_name>
+      <docblock line="28">
+        <description><![CDATA[Command to add a file from a string to the archive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="28" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="28" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="28" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="40" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$localname</name>
+        <default><![CDATA[]]></default>
+        <docblock line="36">
+          <description><![CDATA[Name of file inside the archive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="36" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="46" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$contents</name>
+        <default><![CDATA[]]></default>
+        <docblock line="42">
+          <description><![CDATA[Filecontents]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="42" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="52" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="48">
+          <description><![CDATA[Gets the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="48" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="66" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="62">
+          <description><![CDATA[Gets the last result]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="62" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="79" package="sevenziparchive">
+        <name>execute</name>
+        <full_name>execute</full_name>
+        <docblock line="70">
+          <description><![CDATA[Executes this command.]]></description>
+          <long-description><![CDATA[<p>Returns the exit
+code if it was possible to execute this
+command. Otherwise it will throw an
+Exception.</p>]]></long-description>
+          <tag line="70" name="return" description="SevenZipCommand::EXIT_NO_ERROR&#10;or SevenZipCommand::EXIT_WARNING" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="70" name="throws" description="" type="\eu\maxschuster\sevenzip\exception\SevenZipException">
+            <type by_reference="false">\eu\maxschuster\sevenzip\exception\SevenZipException</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="132" package="sevenziparchive">
+        <name>getLocalname</name>
+        <full_name>getLocalname</full_name>
+        <docblock line="128">
+          <description><![CDATA[Get localname]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="128" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="140" package="sevenziparchive">
+        <name>setLocalname</name>
+        <full_name>setLocalname</full_name>
+        <docblock line="136">
+          <description><![CDATA[Set localname]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="136" name="param" description="" type="string" variable="$localname">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="140">
+          <name>$localname</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="148" package="sevenziparchive">
+        <name>getContents</name>
+        <full_name>getContents</full_name>
+        <docblock line="144">
+          <description><![CDATA[Get contents]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="144" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="156" package="sevenziparchive">
+        <name>setContents</name>
+        <full_name>setContents</full_name>
+        <docblock line="152">
+          <description><![CDATA[Set contents]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="152" name="param" description="" type="string" variable="$contents">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="156">
+          <name>$contents</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>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</source>
+  </file>
+  <file path="cmd/BaseArchiveAccessCommand.php" hash="6c3d2360cb2be42323df7ae6417249a8" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class BaseArchiveAccessCommand]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <class final="true" abstract="true" namespace="eu\maxschuster\sevenzip\cmd" line="33" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\SevenZipCommand</extends>
+      <name>BaseArchiveAccessCommand</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand</full_name>
+      <docblock line="26">
+        <description><![CDATA[Base class for commands that access an archive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="26" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="26" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="26" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="39" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$baseArchiveFile</name>
+        <default><![CDATA[]]></default>
+        <docblock line="35">
+          <description><![CDATA[Base archive file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="45" package="sevenziparchive">
+        <name>getBaseArchiveFile</name>
+        <full_name>getBaseArchiveFile</full_name>
+        <docblock line="41">
+          <description><![CDATA[Gets the base archive file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="return" description="Base archive file" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="53" package="sevenziparchive">
+        <name>setBaseArchiveFile</name>
+        <full_name>setBaseArchiveFile</full_name>
+        <docblock line="49">
+          <description><![CDATA[Sets the base archive file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="49" name="param" description="Base archive file" type="string" variable="$baseArchiveFile">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="53">
+          <name>$baseArchiveFile</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>eJyVVN9P2zAQfkfifzhVPAAqLeNxZUAosEVjrUTKEBMvF/eaWEscz3b6Y9P+99lOUhoK2uaHtLE/333f3Xc5PZep3N3Z3ekfHu7uwCEMC2GQCw0sQ63hEjUFiqV8TgFjpPWwyHMUU4+9kMi+Y0IQ0ZzENy5rpDvsV0HrmHKleJIaODl+dwJfcAkRS0ttSIEH+MctZyQ0TaEUU3tgUoLAJrA/9UkXvpLSvBBw0juGfQfo1Eedg4GPsSpKyHEFojBQarJBuIYZzwhoyUga4AJYkcuMo2AEC25Sn6gO0/NBHusgRewqAWhvSPs220QCGof1eLdSY+T7fn+xWPTQk+4VKulnFVj3b8Ph9Si6PrLE19fuRWbrCYp+lFxZ2fEKUFpmDGPLN8MFFAowUWTPTOGYLxQ3XCRd0MXMLFD5QsOUa6N4XJpW6RqeVv8mwBYPBXSCCMKoA5dBFEZdH+UhnHwa30/gIbi7C0aT8DqC8R0Mx6OrcBKOR/btBoLRI3wOR1ddIFs4m4iWUjkNlih3RaVpVcGIqEViVlSktCTGZ5xZdSIpnXOSYk5KWFEgSeVcu/ZqaAyW8ZwbNH5vS1pvbTOBOWlbddvl8inHpa7N9aSdL39y+cTy6WDT5c7WtcMdN1aZWtvwaAC90V2d8NnPleGxNKnFtxx8OqX5xUbWHpVnFZqtfb/PDrz3u62r7SFqyGJriDC2zUNm/jKPthWGnIJmFJv9X062c2gl3a1afp3Hj8f65GKOCpxdRNLs9as/UhWGmPPQXvxM4sZeHryW4iMZ7bsVv51LkSmVqNO9TaohUMZ2OGBWCuYcAQmZyzaR/QMnF+pVR99z34Cjs23ODvP7NerRP1C3XcK8Yf6yIP8tRW9LeRmzJe11TfABSDOUpFPKMlTJdpBN2f5xbq36B+6j29g=</source>
+  </file>
+  <file path="cmd/CommandInterface.php" hash="c5158a9b44ab3906c0e1ef7050a96505" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains interface CommandInterface]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <interface namespace="eu\maxschuster\sevenzip\cmd" line="33" package="sevenziparchive">
+      <name>CommandInterface</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\CommandInterface</full_name>
+      <docblock line="26">
+        <description><![CDATA[Interface for SevenZipArchive commands]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="26" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="26" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="26" name="package" description="sevenziparchive"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="39" package="sevenziparchive">
+        <name>execute</name>
+        <full_name>execute</full_name>
+        <docblock line="35">
+          <description><![CDATA[Executes the command command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="return" description="Return value" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+    <source>eJx1U11v0zAUfZ+0/3DVp60qzdgjm1jDVkTEaKWmYxrai+vcNBaJbfzRtCD+O9dOWrUg/JDE8fHxOfce397pSp+fnZ8lw+H5GQzhXknHhLQgpENTMo70q2mYLLL9j4ibaMa/szVCjhuU34RODa/EJi4mHWHPp3dGrCsH11dvr+EL20LOK2+JCyIgPh4FR2mxAC8LWnAVQkoH0KtfGcFXNFYoCdfjK7gIgEG/NLi8iRw75aFhO5DKgbdIJMJCKWoE3HLUjhwBV42uBZPkqhWuigf1NONI8tKTqFWoAjDaoWlWHiOBuYCN+DAq5/S7JGnbdsyi6LEy66TuwDZ5zO6ns3z6hoQftj3JGq0Fgz+8MGR7tQOmSRlnK9JbsxaUAbY2SGtOBeWtEU7I9QisKl3LTNeFQlhnxMq7k9LtdZL/YwAVj0kYpDlk+QA+pHmWjyLLc7b8NH9awnO6WKSzZTbNYb6A+/nsIVtm8xnNPkI6e4HP2exhBEiFo4Nwq03wQEJFKCoWXQVzxBMRpepEWY1clIKTO7n2ITlrtUEjyRRoNI2wob2WJBaRpxaNcMzFf/9YGx9iJlmDVoeYon9t2Nb24Xq1IZc/hX7lTXFznPBDjqO0v+IbEhLCbg+tmjDvKgKeJPe2wM3k6LQx+vcdmh/yfsEvY+ZHJ1tPL89eJDu5PP+/evCLIDS6Z+cojCFMt8ipyzZWqTexfx9AE4POGwkrpWqkLCy66YbVHvegpPvQfkVxhNJLHnpA7Y78F/GyRQW/Q1HvyPYfba1Uyg==</source>
+  </file>
+  <file path="cmd/CreateEmptyArchive.php" hash="cbb2031787c6b3aad293dfb1ba33574a" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class CreateEmptyArchive]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\cmd" line="33" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</extends>
+      <name>CreateEmptyArchive</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\CreateEmptyArchive</full_name>
+      <docblock line="26">
+        <description><![CDATA[Command to create an empty archive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="26" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="26" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="26" name="package" description="sevenziparchive"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="39" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="35">
+          <description><![CDATA[Gets the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="50" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="46">
+          <description><![CDATA[Gets last result]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="46" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJyFVG1P2zAQ/o7Ef7hV+wBVSTc+8h7askWDFjUFxoSEXOeaWEuczHb6smn/fWcnLc0QwpXSxvf4ubvHz/XkvEiK3Z3dnW67vbsDbejl0jAhNfCUaQ09hczgICvMylc8EXN0qIuC8Z8sRghxjvKHKLaC3YquZitWSsSJgcNPnw/hhi0h5EmpDSpwAPe4FhylxghKGVHAJAg+JaCvOtKBe1Ra5BIOvU+wZwGtOtTaP3Ycq7yEjK1A5gZKjUQiNMxEioBLjoUBIYHnWZEKJjnCQpjEJappPEfyWJPkU6sBMDpR0NtsGwnMWKzD25UYUxx1u4vFwmOuaC9XcTetwLp7HfQGw3BwQIVvjt3JFElbhb9Koajt6QpYQZVxNqV6U7aAXAGLFVLM5LbyhRJGyLgDOp+ZBVPVLURCGyWmpWlIt66T+t8GkHhMQssPIQhbcOmHQdhxLA/B5OvobgIP/njsDyfBIITRGHqjYT+YBKMhvV2BP3yEb8Gw3wEk4SgRLgtle6BChRUVo0rBELFRxCyvitIFcjETnLqTcWmdE+dzVJKaggJVJrS9Xk0lRo4nFZkwzLi9V615G5tJlqEm1emWy6eMLXVtridtfflbFE88i46b/s4ySmJ15c7bVhW0/gb24uHK5Kw0CdXfcO1JhPOLrUwelmcVmm+8vsf3nd87jaPNwVkXyBqD89bQkd4GZaThluKLXEW3KjfI6V7X/fyxTVo/Vo3a1YYvaLQTjleoTeBCoSmVBGsPGa+3u9WPYs0Ns1JyewcQo6kT7e3bVFCvmuajnbaDM0INlshLY31MQA9a9PFe4OulMZ0dHfVu+s9+v/827IX2kmmspbgSG+6D5Yf2OwfXeoU08DSbes/9XdD6+6ZedAWGGtNlal7pNc3zFJn8X7BySsPbUOuaSMaO4x3BKqDdvGeKsKenp7U8g+/B5Hk4eh6Mx6PxdtXucU6u+wdaPLiW</source>
+  </file>
+  <file path="cmd/ExtractFiles.php" hash="11cb759cf4c614c4c78f0e4fa436a1a5" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class ExtractFiles]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\cmd" line="33" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</extends>
+      <name>ExtractFiles</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\ExtractFiles</full_name>
+      <docblock line="26">
+        <description><![CDATA[Command to extract files from the archive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="26" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="26" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="26" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="39" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$destination</name>
+        <default><![CDATA[]]></default>
+        <docblock line="35">
+          <description><![CDATA[Destination where to extract the files]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="45" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$entries</name>
+        <default><![CDATA[]]></default>
+        <docblock line="41">
+          <description><![CDATA[The entries to extract.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="51" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="47">
+          <description><![CDATA[Gets the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="47" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="67" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="63">
+          <description><![CDATA[Gets the last result]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="63" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="75" package="sevenziparchive">
+        <name>getDestination</name>
+        <full_name>getDestination</full_name>
+        <docblock line="71">
+          <description><![CDATA[Get Destination]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="71" name="return" description="Destination" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="83" package="sevenziparchive">
+        <name>setDestination</name>
+        <full_name>setDestination</full_name>
+        <docblock line="79">
+          <description><![CDATA[Set Destination]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="79" name="param" description="" type="string" variable="$destination">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="83">
+          <name>$destination</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="91" package="sevenziparchive">
+        <name>getEntries</name>
+        <full_name>getEntries</full_name>
+        <docblock line="87">
+          <description><![CDATA[Get entries]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="87" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="99" package="sevenziparchive">
+        <name>setEntries</name>
+        <full_name>setEntries</full_name>
+        <docblock line="95">
+          <description><![CDATA[Set entries]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="95" name="param" description="" type="array" variable="$entries">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="99">
+          <name>$entries</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>eJyFVdtu4kgQfY+Uf6hFeSARMbN5DMNMGEJ20DIQYTKXVSTUtAtord32dLe57Gj+favbNtgBEiOB7a7LqVOnivcfk2VyfnZ+1ry6Oj+DK+jG0jAhNfCQaQ29jVGMmwcRonbndwnj/7IFgo8rlP+IpKP4UqzQHjazQHmcZKvEYmng5t2fN/CFbcDny1QbVOAM3NdAcJQaA0hlQAdmidChBPSTnzTgKyotYgk33juoW4NaflS7bLkY2ziFiG1BxgZSjRREaJgTYMANx8SAkMDjKAkFkxxhLczSJcrDeC7IjzxIPLPVAyOPhJ7mZUtgxto6e3stjUlum831eu0xB9qL1aIZZsa6Oeh3e0O/d03Ad25PknjUoPBnKhSVPdsCSwgZZzPCG7I1xArYQiGdmdgiXythhFw0QMdzs2bKEQ2B0EaJWWoq1BU4qf6yAZHHJNQ6PvT9Gnzq+H2/4aJ8608+j54m8K0zHneGk37Ph9EYuqPhfX/SHw3p6QE6wx/wd3943wAk4igRbhJlayCgwpKKQcagj1gBMY8zUDpBLuaCU3VykVrlLOIVKklFQYIqEtq2VxPEwMUJRSQMM+7dQWneTmaSRaiJdepy+hyxjc7F9aytLv8TyTOPglZV2VFESSyvmKnaqYS0ouLIJWF7KWdaZ6lZUhkV8b4PcHVXSuhh+iGz5jvJ1/mlk32j4lqdnwInq8zP4dRZsCgDDY90so5V8Khig5waWxT0y1ZpBZlVaq8ruEdNunE8wpr6huW6bbHzfKQz87sVU2AlIxfFu2Z2kxTp4CLYx2wdyzmhsCgpCKHeZ/OqSZhSbHs6R+5/NP5faLTDzrPK94EVmlTJtwqYp5I7QhZocvLql5Y+yK8L0gy04cKukOsPZNXbIE+NHU4y9KBGH486F85vb7tf7qe975NxpzuZ2kGaPjwNBtPHzuSzX1juA+8S7CJ/Yhrz1WnbnIe/3roMe7Oi6T6tLdow2todhiXHuOpXan+BvLX3E3OoCz11rajnTjnxlxVC7EWDjLTd4IUhMJ11a3vgsaPSa1toQv1hwaHmLEG9xDBkalHPfVtV19/7x9Jt3t6LbKTzw1f0QUNkyEmnoTnQyCyOQ2TypUjSGW3hikIGFGTsYlRFUoDZcZ0Z2pdfmSLbdruda6T3vT+ZDkfT3ng8Gr+BvDyxJ4R9zOQ0/qoEThZQHeqTCP1TCGmBsagAWF4RbyDUVYRlz+pMHsCkCX2ppbLzWzzn+j3g+OhiOqS1l7m/Rul+h71K5wGQjEqHY7cI32axAFR4HGOvmNl2ecHuwLmvj/Qv9j/HBuf1</source>
+  </file>
+  <file path="cmd/GetFromName.php" hash="7b51f8dae46390480bcab832b04a958b" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class GetFromName]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="SevenZipException">eu\maxschuster\sevenzip\exception\SevenZipException</namespace-alias>
+    <namespace-alias name="SevenZipArchive">eu\maxschuster\sevenzip\SevenZipArchive</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\cmd" line="36" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</extends>
+      <name>GetFromName</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\GetFromName</full_name>
+      <docblock line="29">
+        <description><![CDATA[Command to directly output a file from the archive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="29" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="29" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="29" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="42" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$name</name>
+        <default><![CDATA[]]></default>
+        <docblock line="38">
+          <description><![CDATA[Name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="38" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="48" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="44">
+          <description><![CDATA[Gets the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="44" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="62" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="58">
+          <description><![CDATA[Gets the last result]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="58" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="75" package="sevenziparchive">
+        <name>execute</name>
+        <full_name>execute</full_name>
+        <docblock line="66">
+          <description><![CDATA[Executes this command.]]></description>
+          <long-description><![CDATA[<p>Returns the exit
+code if it was possible to execute this
+command. Otherwise it will throw an
+Exception.</p>]]></long-description>
+          <tag line="66" name="return" description="SevenZipCommand::EXIT_NO_ERROR&#10;or SevenZipCommand::EXIT_WARNING" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="66" name="throws" description="" type="\eu\maxschuster\sevenzip\exception\SevenZipException">
+            <type by_reference="false">\eu\maxschuster\sevenzip\exception\SevenZipException</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="127" package="sevenziparchive">
+        <name>getName</name>
+        <full_name>getName</full_name>
+        <docblock line="123">
+          <description><![CDATA[Get name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="123" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="135" package="sevenziparchive">
+        <name>setName</name>
+        <full_name>setName</full_name>
+        <docblock line="131">
+          <description><![CDATA[Set name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="131" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="135">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>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</source>
+  </file>
+  <file path="cmd/ListArchive.php" hash="331495fef252062a1d12411b439d9e89" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class ListArchive]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="SevenZipException">eu\maxschuster\sevenzip\exception\SevenZipException</namespace-alias>
+    <namespace-alias name="DateTime">DateTime</namespace-alias>
+    <namespace-alias name="SevenZipFile">eu\maxschuster\sevenzip\result\SevenZipFile</namespace-alias>
+    <namespace-alias name="SevenZipFolder">eu\maxschuster\sevenzip\result\SevenZipFolder</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\cmd" line="38" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</extends>
+      <name>ListArchive</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\ListArchive</full_name>
+      <docblock line="31">
+        <description><![CDATA[Command to list archive contents]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="31" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="31" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="31" name="package" description="sevenziparchive"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="44" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="40">
+          <description><![CDATA[Gets the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="40" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="57" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="52">
+          <description><![CDATA[Gets the list]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="52" name="return" description="Array containing SevenZipFiles and -Folders" type="\eu\maxschuster\sevenzip\cmd\SevenZipItem[]">
+            <type by_reference="false">\eu\maxschuster\sevenzip\cmd\SevenZipItem[]</type>
+          </tag>
+          <tag line="52" name="throws" description="" type="\eu\maxschuster\sevenzip\exception\SevenZipException">
+            <type by_reference="false">\eu\maxschuster\sevenzip\exception\SevenZipException</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJytVm1P20gQ/o7EfxghpDjISSDXfgmFkvLSRpeGCqdXcQ1Ciz1JVmevfbtrHIr47ze7fsEmBOlOtyAn3p155pnXzYePyTLZ3tre6u3tbW/BHpzGQjMuFPghUwrGXOmh9Jf8Hu3xScL8v9gCwcN7FH/ypHbYy3EKmORB8sVSQ3//oA9f2Qo8f5kqjRKsgH2MuY9CYQCpCOhALxGGZIA+ihMX/kCpeCyg390HxwjsFEc77UOL8RCnELEHELGGVCGBcAVzHiLgysdEAxfgx1ESciZ8hIzrpTVUwHQtyHUBEt8Z54GRRkJv87okMG1krbxZS62TQa+XZVmXWdLdWC56YS6seuPR6fnEO+8Q8UrtuwiRgirx75RLcvvuAVhCzHx2R3xDlkEsgS0k0pmODfNMcs3FwgUVz3XGZJ6FgLIi+V2qG6EreZL/dQEKHhOwM/Rg5O3Ap6E38lyL8mM0/XL5fQo/hldXw8l0dO7B5RWcXk7ORtPR5YTeLmA4uYbfR5MzF5ACR4ZwlUjjAxHlJqgY5BH0EBsk5nFOSiXo8zn3yTuxSE3lLOJ7lIKcggRlxJVJryKKgcUJecQ103ZvzbVuVWaCRago6pTldBaxlSqKa6ZMXf7iycyPgkMjaWpik0xeIWRrVpbzeblzmGvOzpjGKY/w8G0kikka6grmgurvX2rEITl72GzFKKKwmEoIKZ/A8laj2hQahVZVWZ2wVC8p3o0u+xDg/UnNchfT41zar3rT8du2P92GarPRS8Ks0ehr04EKg0gFCr7RQRbL4JuMNfpUgKUbj8Y30zi5f2btwWfUymbYz6WqgxOJOpUCTB2LRbndy78kJTbMU+GbdMECdWHIaRtTUKxdqgM4gl0zFjrHJHW+Qj/VpuFIsAs79Nd9Fi+XwnA+GJx+Pbsdj7zpZrln3E9MYRELk30D/pZ4GSaPBhLNDuXYcVaswvfdvIbNztObwTPlsRa5srJGGqOfNzCUkgacn4930331WrX9B528CNUzlF7KOFOw1h0v85He0RBrJGPMlL6yJf4iH1Q4+jLVSaobaRlX241I8DkVaZwK7dQU23AM+w1Ui5x3FKEy42oDxiyaSEhjGupIwBTpxdkamAWMmE3NRsTC6gJXV6VpGo6LW6vntHrOLHh899ShZ794ztTjgftkvw5qz3a+73Qf31ff6YA+Xn/r7rV7Ldcydyuar7Ez4aszfNVP60ZAc474l+NuMPApWhovZBxdxJJMOK3rTtQJ4MuAD1Tr2ezPg5vXLFtQprU0WS5F+zebJBX/Zcxzoe9Z6FQKv23GNhrU8fY2wuAV3Xebdc3tUef1fhMvGz/jxeP+ExwdQeustTGEFjmvQWq3IxCYQXO6OzbKbh4XN3fBfemJm9PbxP0JMKRb5b9wMFPp/2Cwvv1i68VrOc1yXjXUmpwdNA261axxWpMY6PpRaH4kxamm/wG0aCYndDXoW1lvaBe0TLHdro9N+/hIl98/T8QrRA==</source>
+  </file>
+  <file path="cmd/PasswordProtectedCommand.php" hash="2751a4c1375bc59946ad37f136a96bba" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class PasswordProtectedCommand]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <class final="true" abstract="true" namespace="eu\maxschuster\sevenzip\cmd" line="33" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\BaseArchiveAccessCommand</extends>
+      <name>PasswordProtectedCommand</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</full_name>
+      <docblock line="26">
+        <description><![CDATA[Base class for password protected commands]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="26" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="26" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="26" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="39" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$password</name>
+        <default><![CDATA[]]></default>
+        <docblock line="35">
+          <description><![CDATA[Password.]]></description>
+          <long-description><![CDATA[<p>Value for switch "-p"</p>]]></long-description>
+          <tag line="35" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="46" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$encryptArchiveHeaders</name>
+        <default><![CDATA[]]></default>
+        <docblock line="41">
+          <description><![CDATA[Encrypt archive headers (-mhe switch),
+so filenames will be encrypted.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="52" package="sevenziparchive">
+        <name>hasPassword</name>
+        <full_name>hasPassword</full_name>
+        <docblock line="48">
+          <description><![CDATA[Checks if a password was set.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="48" name="return" description="Has password" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="60" package="sevenziparchive">
+        <name>getPassword</name>
+        <full_name>getPassword</full_name>
+        <docblock line="56">
+          <description><![CDATA[Gets the current password]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="56" name="return" description="Current password" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="68" package="sevenziparchive">
+        <name>setPassword</name>
+        <full_name>setPassword</full_name>
+        <docblock line="64">
+          <description><![CDATA[Sets a new password]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="64" name="param" description="New password" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="68">
+          <name>$password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="76" package="sevenziparchive">
+        <name>getEncryptArchiveHeaders</name>
+        <full_name>getEncryptArchiveHeaders</full_name>
+        <docblock line="72">
+          <description><![CDATA[Encrypt archive headers]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="72" name="return" description="Encrypt archive headers" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="84" package="sevenziparchive">
+        <name>setEncryptArchiveHeaders</name>
+        <full_name>setEncryptArchiveHeaders</full_name>
+        <docblock line="80">
+          <description><![CDATA[Encrypt archive headers]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="80" name="param" description="Encrypt archive headers" type="bool" variable="$encryptArchiveHeaders">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="84">
+          <name>$encryptArchiveHeaders</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="92" package="sevenziparchive">
+        <name>getPasswordSwitches</name>
+        <full_name>getPasswordSwitches</full_name>
+        <docblock line="88">
+          <description><![CDATA[Gets the right password switches for this command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="88" name="return" description="Password switches" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJydVk1v2zgQvQfIf5g1CtQJHLubY9O0cV3vxtiuE0Rpiy5yoemxRFSiWJKy4i3y3zukPlZypGRRHmTLfJx5M/Nm6DfvVKQODw4PJsfHhwdwDLNUWiakAR4zY+CaHnmq19c6tcgtrmdpkjC59tgLxfg3FiIEuEX5j1BTzSOxRbc5KYyWNtVOizCycPrq91P4m91DwKPMWNTgAf7xUXCUBteQyTVt2AhhSg7oo9wZwWfURqQSTsevYOgAg3JrcHTmbezSDBK2A5layAySEWFgI2IEvOeoLAgJPE1ULJjkCLmwkXdUmhl7I19LI+nKZQIYnVD0tmkigVmH9Xi3ImvV68kkz/Mx86THqQ4ncQE2k4+L2XwZzE+IeH3sk4yRMqzxeyY0hb3aAVPEjLMV8Y1ZDqkGFmqkPZs65rkWVshwBCbd2Jxpn2hYC2O1WGW2lbqKJ8XfBFDymITBNIBFMID302ARjLyVL4vby6tPt/BlenMzXd4u5gFc3cDsavlhcbu4WtLbHzBdfoW/FssPI0BKHDnCe6VdDERUuKTiushggNgisUkLUkYhFxvBKToZZk45YbpFLSkoUKgTYVx5DVQCi0UiLLP+t0ehjWuZSZagoaxTlbO7hN2bUlx3xunyX6HueLI+a6r8PSNWhcIdN1WqHFQlc6cSp3NTl+uCZTYibEu9b9a4vWh4HGP2tkDzWvNDfuR1P2odbTdQRZS1GoitqHCM22d6kcpgkaj6qMoWnHJOhakAP1zsTqZF/G4d1+bG8JnFWVEkQx3BIxicqEGNu9gy2iAFybD6bVJ8+S9bL6oMnnV5mkuud9R8ZXQQIaNaGhieJE4U3ufRqIab1Lesryq1aBzDiipb2CgU1iC2StO4n1Z5qkzKZeG3k+MsQv7NgNhQv9dyyJmh0tiGS40209J7hUvaraD7FLIVNTJsMsmdeiFipkr38MiVA8pV2vsNE2V3wxduXp28rYz6oUbroYvwn2iNbweeaY3SPqJSky1qB7MeXA/lEO2TlPe4PkU1cFQZSMw7SJLmWVJxrHUEyw5wD1PTYFobaFHe4wrnLcH28u7RbbcangH3Z3nepdGnUt4n6l+Po6iBD6O7ZX4xOtMXXbeXrpp10znvb+3nG6YYy7UYivmDpryl6MLk9X+czka63j/5/zspKE+0y0tDp2r91qBogXxOyvl8DgOgEQ1jQMOZQhNhHDMdVlZavVtNkQ5v/ep75Lrpfuz9u9k92LP90H6tdFuca2AfAGO6gX90wl++bCIbFfWPd3TB/gSZJTQ/</source>
+  </file>
+  <file path="cmd/Rename.php" hash="7e1a323dd09617ba7b54ca8c15ce4585" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class Rename]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="SevenZipException">eu\maxschuster\sevenzip\exception\SevenZipException</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\cmd" line="35" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</extends>
+      <name>Rename</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\Rename</full_name>
+      <docblock line="28">
+        <description><![CDATA[Command to rename files inside the archive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="28" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="28" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="28" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="41" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$name</name>
+        <default><![CDATA[]]></default>
+        <docblock line="37">
+          <description><![CDATA[Old filename]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="37" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="47" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$newname</name>
+        <default><![CDATA[]]></default>
+        <docblock line="43">
+          <description><![CDATA[New filename]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="43" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="53" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="49">
+          <description><![CDATA[Gets the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="49" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="67" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="63">
+          <description><![CDATA[Gets the last result]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="63" name="return" description="Result" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="75" package="sevenziparchive">
+        <name>getName</name>
+        <full_name>getName</full_name>
+        <docblock line="71">
+          <description><![CDATA[Get name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="71" name="return" description="Name" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="83" package="sevenziparchive">
+        <name>setName</name>
+        <full_name>setName</full_name>
+        <docblock line="79">
+          <description><![CDATA[Set name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="79" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="83">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="91" package="sevenziparchive">
+        <name>getNewname</name>
+        <full_name>getNewname</full_name>
+        <docblock line="87">
+          <description><![CDATA[Get new name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="87" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="99" package="sevenziparchive">
+        <name>setNewname</name>
+        <full_name>setNewname</full_name>
+        <docblock line="95">
+          <description><![CDATA[Set new name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="95" name="param" description="" type="string" variable="$newname">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="99">
+          <name>$newname</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>eJydVO9v2kgQ/R4p/8MI8SGJCPTyMTRtaEJ76BJTYfrrFCla1gOsaq/d3TWGO93/3tldG+ySkOocCcLOm+c3b2b29dtsmR0fHR/1zs6Oj+AMblJpmJAaeMy0hglKlqCLXGeMf2cLhBBXKP8W2UDxpVi5YM9TlAzZRonF0sDFqz8u4J6tIeTLXBtU4ADu405wlBojyGVEAbNEGNAL6KuMdOAzKi1SCRfdV3BiAa0y1DrtO45NmkPCNiBTA7lGIhEa5iJGwDXHzICQwNMkiwWTHKEQZuleVNJ0Hcm3kiSd2bqBUUZGv+Z1JDBjsQ5vn6Ux2WWvVxRFlznR3VQterEH697d6GYYhMNzEr5N+yRjJD8V/siForJnG2AZKeNsRnpjVkCqgC0UUsykVnmhhBFy0QGdzk3BlO9CJLRRYpabhnWVTqq/DiDzmITWIIRR2IJ3g3AUdhzLl9H0z/GnKXwZTCaDYDoahjCewM04uB1NR+OAfr2HQfAN/hoFtx1AMo5ehOtM2RpIqLCmYuQdDBEbIuapF6Uz5GIuOFUnF7mdnEW6QiWpKMhQJULb9mqSGDmeWCTCMOPO9krrbsfMDqQm16nL+UPC1rocrgdt5/IfkT3wJOpbpJ2J5zB+QuhdD9U4D6uTfnMfkoQE2p4otwtuwDQ1SIvI1812e+AXheVmSR40Jv91hKvrmpIu5m88mm/35YSfup3pNFKby1cVwBrLV19W6pNBGWn4SGdFqqKPKjXIaR6qWv61Bdo59kXa5wzGceRKK/fdH16vmAI7T3JRnfX8P1lFCm2b0fen+7QBFv+XFouSeZ/1AxrtvOe+pB2zQpMr+RL5PJfcthoWaEpXTk53vtinTVMEV9C2l8r5G8IN18hzY9eVoF1o0V93B68ejfH88vLm/vZxMgwG98MKWSN6xzSWd+d7sWU73zxNuMur+hnSRUZ3jj4kY5cVkIc7ZD3g/T057dfLLv1r+x2yJ/8dbAANnqEkncdmrwmzNI2RLqBJI1w1I5/R7dfoxB1xeaxvxq+attI90B5+ZoqwV1dXpfHDr6PpYzB+HE4m48kLBUBzJhuTA0Et9rzi0txntdZW40kV4Z4KWmyWVCLa8mUVulThsA0pNQ00yKg5y1AvMY6ptyX8RYdoew+49BsGVUN2wKPtnh+2aU/KL1Z5mt9wq5RUZTzpmQ89ZVuZVJfrPt7Sdf4T3qypkg==</source>
+  </file>
+  <file path="cmd/SevenZipCommand.php" hash="4c21b89f43f8ee058da14204dbaafd91" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class SevenZipCommand]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="SevenZipException">eu\maxschuster\sevenzip\exception\SevenZipException</namespace-alias>
+    <class final="true" abstract="true" namespace="eu\maxschuster\sevenzip\cmd" line="35" package="sevenziparchive">
+      <extends/>
+      <implements>\eu\maxschuster\sevenzip\cmd\CommandInterface</implements>
+      <name>SevenZipCommand</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\SevenZipCommand</full_name>
+      <docblock line="28">
+        <description><![CDATA[Base class for all SevenZipArchive commands]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="28" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="28" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="28" name="package" description="sevenziparchive"/>
+      </docblock>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="45" package="sevenziparchive">
+        <name>CMD_ADD</name>
+        <full_name>CMD_ADD</full_name>
+        <value><![CDATA['a']]></value>
+        <docblock line="40">
+          <description><![CDATA[Adds files to archive.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="40" name="const" description="CMD_ADD"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="52" package="sevenziparchive">
+        <name>CMD_BENCHMARK</name>
+        <full_name>CMD_BENCHMARK</full_name>
+        <value><![CDATA['b']]></value>
+        <docblock line="47">
+          <description><![CDATA[Measures speed of the CPU and checks
+RAM for errors.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="47" name="const" description="CMD_BENCHMARK"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="58" package="sevenziparchive">
+        <name>CMD_DELETE</name>
+        <full_name>CMD_DELETE</full_name>
+        <value><![CDATA['d']]></value>
+        <docblock line="54">
+          <description><![CDATA[Deletes files from archive.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="54" name="const" description="CMD_DELETE"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="66" package="sevenziparchive">
+        <name>CMD_EXTRACT</name>
+        <full_name>CMD_EXTRACT</full_name>
+        <value><![CDATA['e']]></value>
+        <docblock line="60">
+          <description><![CDATA[Extracts files from an archive to the
+current directory or to the output
+directory.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="60" name="const" description="CMD_EXTRACT"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="72" package="sevenziparchive">
+        <name>CMD_LIST</name>
+        <full_name>CMD_LIST</full_name>
+        <value><![CDATA['l']]></value>
+        <docblock line="68">
+          <description><![CDATA[Lists contents of archive.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="68" name="const" description="CMD_LIST"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="78" package="sevenziparchive">
+        <name>CMD_TEST</name>
+        <full_name>CMD_TEST</full_name>
+        <value><![CDATA['t']]></value>
+        <docblock line="74">
+          <description><![CDATA[Tests archive files.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="74" name="const" description="CMD_TEST"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="84" package="sevenziparchive">
+        <name>CMD_RENAME</name>
+        <full_name>CMD_RENAME</full_name>
+        <value><![CDATA['rn']]></value>
+        <docblock line="80">
+          <description><![CDATA[Renames file inside archive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="80" name="const" description="CMD_RENAME"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="93" package="sevenziparchive">
+        <name>CMD_UPDATE</name>
+        <full_name>CMD_UPDATE</full_name>
+        <value><![CDATA['u']]></value>
+        <docblock line="86">
+          <description><![CDATA[Update older files in the archive and add files
+that are not already in the archive.]]></description>
+          <long-description><![CDATA[<p>Note: the updating of solid .7z archives can be
+slow, since it can require some recompression.</p>]]></long-description>
+          <tag line="86" name="const" description="CMD_UPDATE"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="101" package="sevenziparchive">
+        <name>CMD_EXTRACT_WITH_FULL_PATHS</name>
+        <full_name>CMD_EXTRACT_WITH_FULL_PATHS</full_name>
+        <value><![CDATA['x']]></value>
+        <docblock line="95">
+          <description><![CDATA[Extracts files from an archive with their full
+paths in the current directory, or in an output
+directory if specified.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="95" name="const" description="CMD_EXTRACT_WITH_FULL_PATHS"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="111" package="sevenziparchive">
+        <name>EXIT_NO_ERROR</name>
+        <full_name>EXIT_NO_ERROR</full_name>
+        <value><![CDATA[0]]></value>
+        <docblock line="107">
+          <description><![CDATA[No error]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="107" name="const" description="EXIT_NO_ERROR"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="119" package="sevenziparchive">
+        <name>EXIT_WARNING</name>
+        <full_name>EXIT_WARNING</full_name>
+        <value><![CDATA[1]]></value>
+        <docblock line="113">
+          <description><![CDATA[Warning (Non fatal error(s)).]]></description>
+          <long-description><![CDATA[<p>For example,
+one or more files were locked by some other
+application, so they were not compressed.</p>]]></long-description>
+          <tag line="113" name="const" description="EXIT_WARNING"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="125" package="sevenziparchive">
+        <name>EXIT_FATAL_ERROR</name>
+        <full_name>EXIT_FATAL_ERROR</full_name>
+        <value><![CDATA[2]]></value>
+        <docblock line="121">
+          <description><![CDATA[Fatal error]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="121" name="const" description="EXIT_FATAL_ERROR"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="131" package="sevenziparchive">
+        <name>EXIT_COMMAND_LINE_ERROR</name>
+        <full_name>EXIT_COMMAND_LINE_ERROR</full_name>
+        <value><![CDATA[7]]></value>
+        <docblock line="127">
+          <description><![CDATA[Command line error]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="127" name="const" description="EXIT_COMMAND_LINE_ERROR"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="137" package="sevenziparchive">
+        <name>EXIT_NOT_ENOUGH_MEMORY</name>
+        <full_name>EXIT_NOT_ENOUGH_MEMORY</full_name>
+        <value><![CDATA[8]]></value>
+        <docblock line="133">
+          <description><![CDATA[Not enough memory for operation]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="133" name="const" description="EXIT_NOT_ENOUGH_MEMORY"/>
+        </docblock>
+      </constant>
+      <constant namespace="eu\maxschuster\sevenzip\cmd" line="143" package="sevenziparchive">
+        <name>EXIT_USER_STOPED_PROCESS</name>
+        <full_name>EXIT_USER_STOPED_PROCESS</full_name>
+        <value><![CDATA[255]]></value>
+        <docblock line="139">
+          <description><![CDATA[User stopped the process]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="139" name="const" description="EXIT_USER_STOPED_PROCESS"/>
+        </docblock>
+      </constant>
+      <property final="false" static="true" visibility="protected" line="149" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$isCmdCache</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="145">
+          <description><![CDATA[Array to cache isCmd results]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="145" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="155" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$executable</name>
+        <default><![CDATA[]]></default>
+        <docblock line="151">
+          <description><![CDATA[Path to 7-Zip executable file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="151" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="161" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$lastOutput</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="157">
+          <description><![CDATA[Contains the last generated output]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="157" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="167" namespace="eu\maxschuster\sevenzip\cmd" package="Default">
+        <name>$lastReturnVar</name>
+        <default><![CDATA[]]></default>
+        <docblock line="163">
+          <description><![CDATA[Last return value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="163" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="173" package="sevenziparchive">
+        <name>getExecutable</name>
+        <full_name>getExecutable</full_name>
+        <docblock line="169">
+          <description><![CDATA[Gets the current 7-Zip executable file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="169" name="return" description="7-Zip executable file" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="182" package="sevenziparchive">
+        <name>setExecutable</name>
+        <full_name>setExecutable</full_name>
+        <docblock line="177">
+          <description><![CDATA[Sets the 7-Zip executable file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="177" name="param" description="7-Zip executable file" type="string" variable="$executable">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="177" name="param" description="Trust the executable without checking" type="bool" variable="$trust">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="182">
+          <name>$executable</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="182">
+          <name>$trust</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="194" package="sevenziparchive">
+        <name>getLastOutput</name>
+        <full_name>getLastOutput</full_name>
+        <docblock line="190">
+          <description><![CDATA[Gets the last generated output as array]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="190" name="return" description="Last generated output" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="202" package="sevenziparchive">
+        <name>setLastOutput</name>
+        <full_name>setLastOutput</full_name>
+        <docblock line="198">
+          <description><![CDATA[Sets the last generated output]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="198" name="param" description="Last generated output" type="array" variable="$lastOutput">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="202">
+          <name>$lastOutput</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="210" package="sevenziparchive">
+        <name>getLastReturnVar</name>
+        <full_name>getLastReturnVar</full_name>
+        <docblock line="206">
+          <description><![CDATA[Gets the last generated return var]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="206" name="return" description="Last generated return var" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="218" package="sevenziparchive">
+        <name>setLastReturnVar</name>
+        <full_name>setLastReturnVar</full_name>
+        <docblock line="214">
+          <description><![CDATA[Sets the last generated return var]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="214" name="param" description="Last generated return var" type="int" variable="$lastReturnVar">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="218">
+          <name>$lastReturnVar</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="226" package="sevenziparchive">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="222">
+          <description><![CDATA[Command constructor]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="222" name="param" description="Path to the executable" type="string" variable="$executable">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="226">
+          <name>$executable</name>
+          <default><![CDATA['7z']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="234" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="230">
+          <description><![CDATA[Gets the executable command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="230" name="return" description="Command" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="240" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="236">
+          <description><![CDATA[Gets the last parsed result]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="236" name="return" description="Parsed result" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="251" package="sevenziparchive">
+        <name>execute</name>
+        <full_name>execute</full_name>
+        <docblock line="242">
+          <description><![CDATA[Executes this command.]]></description>
+          <long-description><![CDATA[<p>Returns the exit
+code if it was possible to execute this
+command. Otherwise it will throw an
+Exception.</p>]]></long-description>
+          <tag line="242" name="return" description="SevenZipCommand::EXIT_NO_ERROR&#10;or SevenZipCommand::EXIT_WARNING" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="242" name="throws" description="" type="\eu\maxschuster\sevenzip\exception\SevenZipException">
+            <type by_reference="false">\eu\maxschuster\sevenzip\exception\SevenZipException</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="293" package="sevenziparchive">
+        <name>isExecutable</name>
+        <full_name>isExecutable</full_name>
+        <docblock line="285">
+          <description><![CDATA[This function checks if the given file was included to the PATH env
+variable and if it is executable.]]></description>
+          <long-description><![CDATA[<p>I have found this function in
+Andrew Moores post on stackoverflow.com and I added a few small changes.</p>]]></long-description>
+          <tag line="285" name="param" description="Name of the executable" type="string" variable="$file">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="285" name="link" description="http://stackoverflow.com/questions/2994679/how-to-check-an-exectuables-path-is-correct-in-php#answer-2994750" link="http://stackoverflow.com/questions/2994679/how-to-check-an-exectuables-path-is-correct-in-php#answer-2994750"/>
+          <tag line="285" name="return" description="Is executable" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="293">
+          <name>$file</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>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</source>
+  </file>
+  <file path="cmd/TestArchive.php" hash="95de1cfd9f946bdb1527819acac34ea4" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class TestArchive]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="SevenZipException">eu\maxschuster\sevenzip\exception\SevenZipException</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\cmd" line="35" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\cmd\PasswordProtectedCommand</extends>
+      <name>TestArchive</name>
+      <full_name>\eu\maxschuster\sevenzip\cmd\TestArchive</full_name>
+      <docblock line="28">
+        <description><![CDATA[7-Zip command to test an existing Archive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="28" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="28" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="28" name="package" description="sevenziparchive"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip\cmd" line="41" package="sevenziparchive">
+        <name>getCommand</name>
+        <full_name>getCommand</full_name>
+        <docblock line="37">
+          <description><![CDATA[Gets the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="37" name="return" description="Command" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="51" package="sevenziparchive">
+        <name>getLastResult</name>
+        <full_name>getLastResult</full_name>
+        <docblock line="47">
+          <description><![CDATA[Gets the last result]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="47" name="return" description="Result" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\cmd" line="59" package="sevenziparchive">
+        <name>execute</name>
+        <full_name>execute</full_name>
+        <docblock line="55">
+          <description><![CDATA[Executs the command]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="55" name="return" description="No error" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJyVVe9v2zYQ/R4g/8PB6Ac7cKQuXwbYTRvXcTdjqV1YTrsOAQKaOktEZFIjKcve0P99R0pyrBlLMBrwD93j8d27e/S7D3man5+dn4UXF+dncAFjJS0T0gDPmDGwRGNHmqdiiz58kzP+xBKECLco/xD5UTCs8tRp8r0WSWrh6u1PV/CZ7SDiaWEsavAA/3YnOEqDMRQypoBNEUZ0AH3UkT58RW2EknAVvIWuA3TqUKc39Dn2qoAN24NUFgqDlEQYWIsMAXcccwtCAlebPBNMcoRS2NQfVKcJfJLvdRK1csUDox05/VofI4FZh/V4t1Jr80EYlmUZME86UDoJswpswrvpeDKLJpdE/LDtXmZIomr8sxCayl7tgeXEjLMV8c1YCUoDSzRSzCrHvNTCCpn0wai1LZmuuhALY7VYFbYlXcOT6j8GkHhMQmcUwTTqwMdRNI36Psu36fLX+f0Svo0Wi9FsOZ1EMF/AeD67nS6n8xn9+gSj2Xf4bTq77QOScHQQ7nLtaiCiwomKcaVghNgisVYVKZMjF2vBqTqZFG5yErVFLakoyFFvhHHtNUQx9nkysRGWWf/spLTgMGaSbdCQ6tTl4mHDdqYergfj5vIvkT/wTTx0SDcT/4WpJoTOemjGedI8GR6b4udLCrkp2hBN1xlLtnCq4o6EdqUc2aDyCStsShK0Bv9djNubIyIBFu8rND/Ypct73jL91ta29xr+rOW9E8MSO4syNvCFAqXS8RetLHKaiXFdyd+uSDfLVaFuXcAvaI0Xva73ELjRaAstwY0WlTxuh8PqS96cAetCcqckJGhrbLfnjoR61eneOMdevifUZIe8sM4LBAygQ6+Ais3Wg8H48+3jchItn3c3q8E9p/nIDNYSfBJVrtNtz/BGnYiuBnKx6fqLhdaPF9UhtS2VYIrMnii0UipDGo9FK9woVKzI8S157ihXhX1FoQroHn5lmrDX19e1QJPfp8vH2fxxsljMFy8VUIn8coeFtDBTgFor/Qp79OmwzTsMYbRVgqySalW6YTk4zUCZovQGoudBa889WbWlhrMatYQ/gViDsJAy2q70U3Xp1Mvq/fHZvrlVX+AayCMo7WBwoDlsIwu6VWy3xveGR9SLJKM/FbQraiSdyqora3jZe07wAzijkYHuye0Bb3DX+zer+iyKDP/fMScD8UrL/dsHulr+AX4cW5g=</source>
+  </file>
+  <file path="exception/SevenZipException.php" hash="83b5f42ac5d6190bd8c17918cf885cd7" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class SevenZipException]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="Exception">Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\exception" line="35" package="sevenziparchive">
+      <extends>\Exception</extends>
+      <name>SevenZipException</name>
+      <full_name>\eu\maxschuster\sevenzip\exception\SevenZipException</full_name>
+      <docblock line="28">
+        <description><![CDATA[Base Exception for SevenZipArchive]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="28" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="28" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="28" name="package" description="sevenziparchive"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\exception" line="43" package="sevenziparchive">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="37">
+          <description><![CDATA[Construct the exception]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="37" name="param" description="[optional]" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="37" name="param" description="[optional]" type="int" variable="$code">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="37" name="param" description="[optional]" type="\Exception" variable="$previous">
+            <type by_reference="false">\Exception</type>
+          </tag>
+        </docblock>
+        <argument line="43">
+          <name>$message</name>
+          <default><![CDATA['An unknown SevenZip exception occured!']]></default>
+          <type/>
+        </argument>
+        <argument line="43">
+          <name>$code</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="43">
+          <name>$previous</name>
+          <default><![CDATA[null]]></default>
+          <type>\Exception</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJx9VNtu00AQfa/UfxiiSrSVSUofe6F12yAsSiLVKVUhqNqsJ/Gqzq7ZS5yA+Hdm106aQGAffJuzM2fOnvHZRZmXuzu7O53Dw90dOIRrJS0T0gAvmDGQ4gzlF1F25xxLK5QMoMuS8Wc2wVU41jwXM/TBTp2tSVYutJjkFo6P3h7DJzaHlOfOWNQQAOFyKzhKgxk4mVHA5ggxFaBbE4ngM2pDxeG4fQT7HtBqQq2D05BjoRxM2QKksuAMUhJhYCwKBAzMQUjgaloWgkmOUAmbh0JNmnZI8tgkUSMvATDaUdLbeB0JzHpswPuVW1uedDpVVbVZIN1WetIparDp3CbX3V7afUPEV9vuZYEkrcbvTmhqe7QAVhIzzkbEt2AVKA1sopFiVnnmlRZWyEkERo1txXQQGjJhrBYjZzekW/Kk/tcBJB6T0IpTSNIWXMVpkkYhy0My+NC/H8BDfHcX9wZJN4X+HVz3ezfJIOn36O09xL1H+Jj0biJAEo4K4bzUvgciKryomNUKpogbJMaqJmVK5GIsOHUnJ847Z6JmqCU1BSXqqTD+eA1RzEKeQkyFZTZ8+6u19spmkk3RkOp0ym44ZXPTmGtovC9/iHKIS9+eerx3xrC78Wnp+ytGsVUoEN9i7tr9zNmc4ht2PstwdrlGoY3uXY3mqyHY5wdhEKKNrZsTtWTONibqH8NI52BRZmaN+E/flDdm3ZhfYajJCY7bICOuzXIdp+qaTcG7hQ5kj0Q1nstXFWCs+PYnUkgLe1xl/8O8cNojs8yEcmYLulM/lG5EAwBjJ3nY8vTEl5z3V3zO4XUsyQ/PUlVypcZLP6A4dzRRr15HDbtzOIq2EjkH6YriwMsFzSLWKO3JybbSTb7oJUP479D65fUOlws679+nYq20</source>
+  </file>
+  <file path="inc.sevenzip.php" hash="38deccf4993ebd571e8760edb0613192" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Main include file for SevenZipArchive]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <include line="23" type="Require Once" package="Default">
+      <name>exception/SevenZipException.php</name>
+    </include>
+    <include line="25" type="Require Once" package="Default">
+      <name>SevenZipArchive.php</name>
+    </include>
+    <include line="27" type="Require Once" package="Default">
+      <name>cmd/CommandInterface.php</name>
+    </include>
+    <include line="28" type="Require Once" package="Default">
+      <name>cmd/SevenZipCommand.php</name>
+    </include>
+    <include line="29" type="Require Once" package="Default">
+      <name>cmd/BaseArchiveAccessCommand.php</name>
+    </include>
+    <include line="30" type="Require Once" package="Default">
+      <name>cmd/PasswordProtectedCommand.php</name>
+    </include>
+    <include line="31" type="Require Once" package="Default">
+      <name>cmd/ListArchive.php</name>
+    </include>
+    <include line="32" type="Require Once" package="Default">
+      <name>cmd/TestArchive.php</name>
+    </include>
+    <include line="33" type="Require Once" package="Default">
+      <name>cmd/CreateEmptyArchive.php</name>
+    </include>
+    <include line="34" type="Require Once" package="Default">
+      <name>cmd/AddFile.php</name>
+    </include>
+    <include line="35" type="Require Once" package="Default">
+      <name>cmd/AddFileFromString.php</name>
+    </include>
+    <include line="36" type="Require Once" package="Default">
+      <name>cmd/GetFromName.php</name>
+    </include>
+    <include line="37" type="Require Once" package="Default">
+      <name>cmd/ExtractFiles.php</name>
+    </include>
+    <include line="38" type="Require Once" package="Default">
+      <name>cmd/Rename.php</name>
+    </include>
+    <include line="40" type="Require Once" package="Default">
+      <name>result/SevenZipItem.php</name>
+    </include>
+    <include line="41" type="Require Once" package="Default">
+      <name>result/SevenZipFile.php</name>
+    </include>
+    <include line="42" type="Require Once" package="Default">
+      <name>result/SevenZipFolder.php</name>
+    </include>
+    <source>eJyNk11v2jAUhu+R+A9H3HRDjHS9XKd1KaVbNBYqQld1N5NxDom1xPZsh8C/33EIqKVljIsgx895z9ebj1c6191OtxP0+90O9OE7ExKE5EWVIixFQQ9lIMEVyp9Ch4bnYoUN+Vkz/ptl+NplsJVsuJHSGyOy3MHF+fsLSrCGhOeVdWigAZrHRHCUFlOoZEoXLkcIKQH9tTcD+IHGCiXhYngObzzQa696by8bjY2qoGQbkMpBZZFEhN32gGuO2lFfwFWpC8EkR6iFy5tErcywEXlsRdTC+VEwitB0Wj4lgTnPNrz/5c7pD0FQ1/WQNUUPlcmCYgvbYBKNxnEyfkeF78PuZYHWgsE/lTDU9mIDTFNlnC2o3oLVQGNnmUG6c8pXXhvhhMwGYNXS1cxst5AK64xYVO7Z6HZ1Uv9PARoek9ALE4iSHlyHSZQMGpWHaP51ej+Hh3A2C+N5NE5gOoPRNL6J5tE0ptMthPEjfIvimwEgDY4S4Vob3wMVKvxQMd1OMEF8VoQ3kD9bjVwsBafuZFZ552RqhUZSU6DRlML69VoqMW10ClEKx1zz7kVrw9Zm7QB/Kb/Rs+2eKSLYmXK8ezMko59del8+Dzlw7zGMl2kwUmVJxUWSrLtkfM++JHeibcRx8JpZbDOHnNM0T0bcMWtrZdI7oxxy2urJiAk54KC7l9Ac/wMaGWQOx6V2m5NsmKa39OmdBG6NKhNyqMyOo1/QeSxm5T/0xmtnGHde0x6nZiifqBwS5OeqcPv1RQ7L16UOwOOdHoKqICPv0KtP3c5fwpjW2w==</source>
+  </file>
+  <file path="result/SevenZipFile.php" hash="d894c23be22d3f7151ff8fd3277c3944" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class SevenZipFile]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\result" line="33" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\result\SevenZipItem</extends>
+      <name>SevenZipFile</name>
+      <full_name>\eu\maxschuster\sevenzip\result\SevenZipFile</full_name>
+      <docblock line="26">
+        <description><![CDATA[List item is a file]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="26" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="26" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="26" name="package" description="sevenziparchive"/>
+      </docblock>
+    </class>
+    <source>eJxlU9Fu2jAUfUfiH654ahGDjse1Wsko1aKxIBG6qhMvxrkk1hLbsx0Cnfbvu3YoA9UPiex7fHzu8fHdvS50t9PtjPr9bgf6MFXSMSEt8JJZCynuUP4U+lGUGOoTzfgvluOpEhleiF0ojlqiI48+GJEXDsY3H8fwne0h5UVtHRoIgPCZC47SYga1zKjgCoSIDqDfsTKAH2isUBLGwxu48oDesdS7vg0cB1VDxQ4glYPaIpEIC1vSC7jnqB0ICVxVuhRMcoRGuCIcdKQZBpKXI4na+O6B0Q5Ns+05Epjz2ID3o3BOfxqNmqYZsiB6qEw+KluwHc3j6SxJZx9I+GnbkyyRXDX4uxaG2t4cgGlSxtmG9JasAWWA5Qap5pRX3hjhhMwHYNXWNcy0t5AJ64zY1O7Cujed1P85gMxjEnpRCnHagy9RGqeDwPIcr74unlbwHC2XUbKKZyksljBdJA/xKl4kNHuEKHmBb3HyMAAk4+gg3GvjeyChwpuKWetginghYqtaUVYjF1vBqTuZ1z45udqhkdQUaDSVsP56LUnMAk8pKuGYC2vvWhueYiZZhZZcp1uu1xXb22O41tbn8lXoNamsS3d7Hu45uQLCYeUtYiEkp6uZsNoVpPkiqXcZ7iZn7EOsP7dofsr3Fb8OGR9cbL18LG+i2MVjef/EyF2HMvu/GHuxfwhPo9v565u5JwX/ALT4K40=</source>
+  </file>
+  <file path="result/SevenZipFolder.php" hash="596ffd08e5bdb99d3cc2d157bb7bd064" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class SevenZipFolder]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip\result" line="33" package="sevenziparchive">
+      <extends>\eu\maxschuster\sevenzip\result\SevenZipItem</extends>
+      <name>SevenZipFolder</name>
+      <full_name>\eu\maxschuster\sevenzip\result\SevenZipFolder</full_name>
+      <docblock line="26">
+        <description><![CDATA[List item is a folder]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="26" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="26" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="26" name="package" description="sevenziparchive"/>
+      </docblock>
+    </class>
+    <source>eJxtU11v2jAUfUfiP1zx1CJGOh7Xam1GqRaNgUToqk68GOeSWEtsz3YIdNp/37X5GNHmh0T2PT4+9/j47l4XutvpdqJ+v9uBPoyVdExIC7xk1kKKW5TfhX5SZYYmIB404z9YjudabHghtuiL0YHqyKT3RuSFg9HN+xF8ZTtIeVFbhwYCIHymgqO0mEEt6QBwBUJMB9DvWBnANzRWKAmj4Q1ceUDvWOpd3waOvaqhYnuQykFtkUiEhY0oEXDHUTsQEriqdCmY5AiNcEU46EgzDCSvRxK19v0Dox2aZptLJDDnsQHvR+Gc/hBFTdMMWRA9VCaPygPYRtNkPJmlk3ck/LztWZZIvhr8WQtDba/3wDQp42xNekvWgDLAcoNUc8orb4xwQuYDsGrjGmaC0ZAJ64xY165l3Ukn9X8JIPOYhF6cQpL24FOcJukgsLwky8/z5yW8xItFPFsmkxTmCxjPZ4/JMpnPaPYE8ewVviSzxwEgGUcH4U4b3wMJFd5UzA4OpogtERt1EGU1crERnLqTee2Tk6stGklNgUZTCeuv15LELPCUohKOubD2T2vDc8wkq9CS63TL9apiO3sM18r6XL4JvSKVdeluL+M9JVdAOKy8RYwknmJ9iDarXUGqW1m9y3D7cME/xPrjAc3PCb/i1yHlg9bW9nM5yWKt5/K/Z0YOO5TZ3+XEC/5FO2h0O799Q/ek4Q/NGy4h</source>
+  </file>
+  <file path="result/SevenZipItem.php" hash="7f2ca6a6ddf7fab4415f8f52b379e452" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class SevenZipItem]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="DateTime">DateTime</namespace-alias>
+    <class final="true" abstract="true" namespace="eu\maxschuster\sevenzip\result" line="35" package="sevenziparchive">
+      <extends/>
+      <name>SevenZipItem</name>
+      <full_name>\eu\maxschuster\sevenzip\result\SevenZipItem</full_name>
+      <docblock line="28">
+        <description><![CDATA[Base class for items from the file listing]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="28" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="28" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="28" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="41" namespace="eu\maxschuster\sevenzip\result" package="Default">
+        <name>$name</name>
+        <default><![CDATA[]]></default>
+        <docblock line="37">
+          <description><![CDATA[Name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="37" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="47" namespace="eu\maxschuster\sevenzip\result" package="Default">
+        <name>$date</name>
+        <default><![CDATA[]]></default>
+        <docblock line="43">
+          <description><![CDATA[Date]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="43" name="var" description="" type="\DateTime">
+            <type by_reference="false">\DateTime</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="53" namespace="eu\maxschuster\sevenzip\result" package="Default">
+        <name>$attributes</name>
+        <default><![CDATA[]]></default>
+        <docblock line="49">
+          <description><![CDATA[Attributes]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="49" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="59" namespace="eu\maxschuster\sevenzip\result" package="Default">
+        <name>$size</name>
+        <default><![CDATA[]]></default>
+        <docblock line="55">
+          <description><![CDATA[Size]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="55" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="65" namespace="eu\maxschuster\sevenzip\result" package="Default">
+        <name>$sizeCompressed</name>
+        <default><![CDATA[]]></default>
+        <docblock line="61">
+          <description><![CDATA[Size compressed]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="61" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\result" line="75" package="sevenziparchive">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="67">
+          <description><![CDATA[Constructor]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="67" name="param" description="" type="\DateTime" variable="$date">
+            <type by_reference="false">\DateTime</type>
+          </tag>
+          <tag line="67" name="param" description="" type="string" variable="$attributes">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="67" name="param" description="" type="int" variable="$size">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="67" name="param" description="" type="int" variable="$sizeCompressed">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="67" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="75">
+          <name>$date</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="75">
+          <name>$attributes</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="75">
+          <name>$size</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="75">
+          <name>$sizeCompressed</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="75">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\result" line="87" package="sevenziparchive">
+        <name>getName</name>
+        <full_name>getName</full_name>
+        <docblock line="83">
+          <description><![CDATA[Get name]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="83" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\result" line="95" package="sevenziparchive">
+        <name>getDate</name>
+        <full_name>getDate</full_name>
+        <docblock line="91">
+          <description><![CDATA[Get date]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="91" name="return" description="" type="\DateTime">
+            <type by_reference="false">\DateTime</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\result" line="103" package="sevenziparchive">
+        <name>getAttributes</name>
+        <full_name>getAttributes</full_name>
+        <docblock line="99">
+          <description><![CDATA[Get attributes]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="99" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\result" line="111" package="sevenziparchive">
+        <name>getSize</name>
+        <full_name>getSize</full_name>
+        <docblock line="107">
+          <description><![CDATA[Get size]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="107" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip\result" line="119" package="sevenziparchive">
+        <name>getSizeCompressed</name>
+        <full_name>getSizeCompressed</full_name>
+        <docblock line="115">
+          <description><![CDATA[Get size compressed]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="115" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJyVVWFP2zAQ/Y7EfzihfQCUtYyPYxuUwrZorEik28SENLnutbWWOJnttLBp/313TpombdOJfChN7/n53fM78+Y8m2X7e/t73ePj/T04hn6qnVDagoyFtRDhHPV3lYUOE1+/yIT8KaZYVXpGztQcudgtiEqe7Mmo6czB6cmrU/gsHiGSs9w6NOAB/uNGSdQWx5DrMRXcDKFHG9CfshLAVzRWpRpOOydwyICDsnRwdOY5ntIcEvEEOnWQWyQSZWGiYgR8lJg5UBpkmmSxEloiLJSb+Y1Kmo4nuS9J0hF3D4JWZPQ2qSNBOMZ6PD8z57LX3e5isegIL7qTmmk3LsC2exP2rwfR9UsSXi37omMkVw3+ypWhtkdPIDJSJsWI9MZiAakBMTVINZey8oVRTulpADaduIUw3mgYK+uMGuWuYd1SJ/VfB5B5QsNBL4IwOoDLXhRGgWf5Fg4/3n4Zwrfe3V1vMAyvI7i9g/7t4CochrcDensPvcE9fAoHVwEgGUcb4WNmuAcSqthUHBcORogNEZO0EGUzlGqiJHWnpzknZ5rO0WhqCjI0ibJ8vJYkjj1PrBLlhPO/bbTWqWKmRYKWXKdTzh8S8WjLcD1YzuVvlT2Qyjx2ZwzmWDxcCYdDleBZPe6XgkpF1FmwopjTN5MmflefopisJLHVGV6I3M0I24j0mzHOL2oyOpi/K9CyGoRDeeSHIWgsbU7VUr1oTJUY0WkK6bYMJfwhDD3FZ9EWP8cwIIeql4u5MMCR8I3437rFl8ykDiXn5AV7etZGx/Y16ZaGthOOCdFK2HNlQu3zVIpqXSt1pH6vaVXaQTulJfxOMn+BcOxxvMG7m7ZfLfS5Wyen65b6zaVLzYqYTl8klb2FjevVwqW6G+sIbtlLaC30tzTVZNdi43gnuZY8nfDjh1yKP/QSg7qaoNgiWN8pKEiPlrnl5wVf2S/f8e/wthHDWpV34GotU7XqamPGbESkhmQ5jKmd+Vp1JXaJaxwio/+2heUDOtCNwTPocqNbUp2P6O5fWTpFx1N72HCnJKiZtBKxXUAzL+X6tmndlMDIXRJqJ9AqYVssn+nE6n7YJWbjqFslNUehZNkyv5tK+AbYpaEWpZ27b71FnitklcX/SWpPrVd5Tv+g/gG/xM4M</source>
+  </file>
+  <file path="SevenZipArchive.php" hash="c7a0b993139feed6c3d4a123d780b384" package="SevenZipArchive">
+    <docblock line="3">
+      <description><![CDATA[Contains class SevenZipArchive]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="3" name="package" description="SevenZipArchive"/>
+    </docblock>
+    <namespace-alias name="ListArchive">eu\maxschuster\sevenzip\cmd\ListArchive</namespace-alias>
+    <namespace-alias name="TestArchive">eu\maxschuster\sevenzip\cmd\TestArchive</namespace-alias>
+    <namespace-alias name="SevenZipException">eu\maxschuster\sevenzip\exception\SevenZipException</namespace-alias>
+    <namespace-alias name="SevenZipItem">eu\maxschuster\sevenzip\result\SevenZipItem</namespace-alias>
+    <namespace-alias name="SevenZipCommand">eu\maxschuster\sevenzip\cmd\SevenZipCommand</namespace-alias>
+    <namespace-alias name="CreateEmptyArchive">eu\maxschuster\sevenzip\cmd\CreateEmptyArchive</namespace-alias>
+    <namespace-alias name="AddFile">eu\maxschuster\sevenzip\cmd\AddFile</namespace-alias>
+    <namespace-alias name="AddFileFromString">eu\maxschuster\sevenzip\cmd\AddFileFromString</namespace-alias>
+    <namespace-alias name="GetFromName">eu\maxschuster\sevenzip\cmd\GetFromName</namespace-alias>
+    <namespace-alias name="ExtractFiles">eu\maxschuster\sevenzip\cmd\ExtractFiles</namespace-alias>
+    <namespace-alias name="Rename">eu\maxschuster\sevenzip\cmd\Rename</namespace-alias>
+    <class final="false" abstract="false" namespace="eu\maxschuster\sevenzip" line="45" package="sevenziparchive">
+      <extends/>
+      <name>SevenZipArchive</name>
+      <full_name>\eu\maxschuster\sevenzip\SevenZipArchive</full_name>
+      <docblock line="38">
+        <description><![CDATA[Class to access 7-zip achives using the commandline version of 7-zip]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="38" name="author" description="Max Schuster &lt;dev@maxschuster.eu&gt;"/>
+        <tag line="38" name="copyright" description="(c) 2012, Max Schuster"/>
+        <tag line="38" name="package" description="sevenziparchive"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="51" namespace="eu\maxschuster\sevenzip" package="Default">
+        <name>$executableFile</name>
+        <default><![CDATA[]]></default>
+        <docblock line="47">
+          <description><![CDATA[Path to the 7zip executable file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="47" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="57" namespace="eu\maxschuster\sevenzip" package="Default">
+        <name>$archivePath</name>
+        <default><![CDATA[]]></default>
+        <docblock line="53">
+          <description><![CDATA[Name of the currently open zip file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="53" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="63" namespace="eu\maxschuster\sevenzip" package="Default">
+        <name>$password</name>
+        <default><![CDATA[]]></default>
+        <docblock line="59">
+          <description><![CDATA[Password]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="59" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="70" namespace="eu\maxschuster\sevenzip" package="Default">
+        <name>$encryptArchiveHeaders</name>
+        <default><![CDATA[]]></default>
+        <docblock line="65">
+          <description><![CDATA[Encrypt archive headers,
+so filenames will be encrypted.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="65" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="public" line="76" namespace="eu\maxschuster\sevenzip" package="Default">
+        <name>$winDoubleQuoteFix</name>
+        <default><![CDATA[true]]></default>
+        <docblock line="72">
+          <description><![CDATA[Enable the double quote fix for proc_open on WINNT mashines]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="72" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="82" package="sevenziparchive">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="78">
+          <description><![CDATA[Constructor of SevenZipArchive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="78" name="param" description="Path to the 7z executable" type="string" variable="$executableFile">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="82">
+          <name>$executableFile</name>
+          <default><![CDATA['7z']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="92" package="sevenziparchive">
+        <name>open</name>
+        <full_name>open</full_name>
+        <docblock line="86">
+          <description><![CDATA[Opens an existing 7zip archive or creates a new one]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="86" name="param" description="Path to the 7zip file" type="string" variable="$filename">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="86" name="param" description="Password" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="86" name="throws" description="" type="\eu\maxschuster\sevenzip\exception\SevenZipException">
+            <type by_reference="false">\eu\maxschuster\sevenzip\exception\SevenZipException</type>
+          </tag>
+        </docblock>
+        <argument line="92">
+          <name>$filename</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="92">
+          <name>$password</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="125" package="sevenziparchive">
+        <name>close</name>
+        <full_name>close</full_name>
+        <docblock line="122">
+          <description><![CDATA[Closes the archive (not needed.]]></description>
+          <long-description><![CDATA[<p>..)</p>]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip" line="134" package="sevenziparchive">
+        <name>checkIfOpen</name>
+        <full_name>checkIfOpen</full_name>
+        <docblock line="129">
+          <description><![CDATA[Checks if an archive is open.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="129" name="return" description="Has an open archive" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="129" name="throws" description="" type="\eu\maxschuster\sevenzip\exception\SevenZipException">
+            <type by_reference="false">\eu\maxschuster\sevenzip\exception\SevenZipException</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip" line="146" package="sevenziparchive">
+        <name>testArchive</name>
+        <full_name>testArchive</full_name>
+        <docblock line="141">
+          <description><![CDATA[Checks if an existing archive is ok]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="141" name="param" description="Path of archive" type="string" variable="$path">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="141" name="return" description="Is ok?" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="146">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="159" package="sevenziparchive">
+        <name>listArchive</name>
+        <full_name>listArchive</full_name>
+        <docblock line="155">
+          <description><![CDATA[Lists the content of the given archive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="155" name="return" description="Array of SevenZipFiles and SevenZipFolders" type="\eu\maxschuster\sevenzip\result\SevenZipItem[]">
+            <type by_reference="false">\eu\maxschuster\sevenzip\result\SevenZipItem[]</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="174" package="sevenziparchive">
+        <name>addFile</name>
+        <full_name>addFile</full_name>
+        <docblock line="168">
+          <description><![CDATA[Adds a file to the archive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="168" name="param" description="Path of the file inside the filesystem" type="string" variable="$filename">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="168" name="param" description="[optional] Path inside the archive" type="string" variable="$localname">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="168" name="return" description="True if successfull" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="174">
+          <name>$filename</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="174">
+          <name>$localname</name>
+          <default><![CDATA[NULL]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="192" package="sevenziparchive">
+        <name>addFileFromString</name>
+        <full_name>addFileFromString</full_name>
+        <docblock line="186">
+          <description><![CDATA[Creates a file inside the archive with the given contents]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="186" name="param" description="Path inside the archive" type="string" variable="$localname">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="186" name="param" description="Filecontents" type="string" variable="$contents">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="186" name="return" description="True if successfull" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="192">
+          <name>$localname</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="192">
+          <name>$contents</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="209" package="sevenziparchive">
+        <name>getFromName</name>
+        <full_name>getFromName</full_name>
+        <docblock line="204">
+          <description><![CDATA[Gets the contents of the given filename from the archive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="204" name="param" description="Name of the file inside the archive" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="204" name="return" description="Contents" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="209">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="227" package="sevenziparchive">
+        <name>extractTo</name>
+        <full_name>extractTo</full_name>
+        <docblock line="220">
+          <description><![CDATA[Extracts files from the archive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="220" name="param" description="Path where the archive contents should get extracted" type="string" variable="$destination">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="220" name="param" description="[optional] One filename as string or an array of filenames that should be extracted" type="string|array" variable="$entries">
+            <type by_reference="false">string</type>
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="220" name="return" description="True if successfull" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="227">
+          <name>$destination</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="227">
+          <name>$entries</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="253" package="sevenziparchive">
+        <name>renameName</name>
+        <full_name>renameName</full_name>
+        <docblock line="244">
+          <description><![CDATA[Renames a file inside the archive
+IMPORTANT:
+Only available after 7-Zip 9.25 alpha
+(http://sourceforge.net/projects/sevenzip/forums/forum/45797/topic/5367077)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="244" name="param" description="Old filename" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="244" name="param" description="New filena" type="string" variable="$newname">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="244" name="return" description="True if successfull" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="253">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="253">
+          <name>$newname</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="272" package="sevenziparchive">
+        <name>getExecutableFile</name>
+        <full_name>getExecutableFile</full_name>
+        <docblock line="267">
+          <description><![CDATA[Gets the current executable file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="267" name="return" description="Path to executable file" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="267" name="throws" description="" type="\eu\maxschuster\sevenzip\exception\SevenZipException">
+            <type by_reference="false">\eu\maxschuster\sevenzip\exception\SevenZipException</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="284" package="sevenziparchive">
+        <name>setExecutableFile</name>
+        <full_name>setExecutableFile</full_name>
+        <docblock line="278">
+          <description><![CDATA[Sets the new executable file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="278" name="param" description="Path to executable file" type="string" variable="$executableFile">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="278" name="return" description="New executable file has been set" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+          <tag line="278" name="throws" description="" type="\eu\maxschuster\sevenzip\exception\SevenZipException">
+            <type by_reference="false">\eu\maxschuster\sevenzip\exception\SevenZipException</type>
+          </tag>
+        </docblock>
+        <argument line="284">
+          <name>$executableFile</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="304" package="sevenziparchive">
+        <name>setArchivePath</name>
+        <full_name>setArchivePath</full_name>
+        <docblock line="300">
+          <description><![CDATA[Set the base archive path]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="300" name="param" description="" type="string" variable="$archivePath">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="304">
+          <name>$archivePath</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="312" package="sevenziparchive">
+        <name>getArchivePath</name>
+        <full_name>getArchivePath</full_name>
+        <docblock line="308">
+          <description><![CDATA[Gets the path of the currently open archive file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="308" name="return" description="Currently open archive file" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="320" package="sevenziparchive">
+        <name>getPassword</name>
+        <full_name>getPassword</full_name>
+        <docblock line="316">
+          <description><![CDATA[Gets the current password]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="316" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="eu\maxschuster\sevenzip" line="328" package="sevenziparchive">
+        <name>setPassword</name>
+        <full_name>setPassword</full_name>
+        <docblock line="324">
+          <description><![CDATA[Sets a new password]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="324" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="328">
+          <name>$password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="336" package="sevenziparchive">
+        <name>getEncryptArchiveHeaders</name>
+        <full_name>getEncryptArchiveHeaders</full_name>
+        <docblock line="332">
+          <description><![CDATA[Encrypt archive headers]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="332" name="return" description="Encrypt archive headers" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="eu\maxschuster\sevenzip" line="344" package="sevenziparchive">
+        <name>setEncryptArchiveHeaders</name>
+        <full_name>setEncryptArchiveHeaders</full_name>
+        <docblock line="340">
+          <description><![CDATA[Encrypt archive headers]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="340" name="param" description="Encrypt archive headers" type="bool" variable="$encryptArchiveHeaders">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="344">
+          <name>$encryptArchiveHeaders</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>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</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="SevenZipArchive" full_name="SevenZipArchive"/>
+  <package name="sevenziparchive" full_name="sevenziparchive"/>
+  <namespace name="eu" full_name="eu">
+    <namespace name="maxschuster" full_name="eu\maxschuster">
+      <namespace name="sevenzip" full_name="eu\maxschuster\sevenzip">
+        <namespace name="cmd" full_name="eu\maxschuster\sevenzip\cmd"/>
+        <namespace name="exception" full_name="eu\maxschuster\sevenzip\exception"/>
+        <namespace name="result" full_name="eu\maxschuster\sevenzip\result"/>
+      </namespace>
+    </namespace>
+  </namespace>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Contains class SevenZipItem
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 
@@ -59,6 +64,14 @@ abstract class SevenZipItem {
      */
     protected $sizeCompressed;
 
+    /**
+     * Constructor
+     * @param DateTime $date
+     * @param string $attributes
+     * @param int $size
+     * @param int $sizeCompressed
+     * @param string $name
+     */
     function __construct($date, $attributes, $size, $sizeCompressed, $name) {
         $this->name = $name;
         $this->date = $date;

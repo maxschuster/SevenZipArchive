@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Contains class SevenZipArchive
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 
@@ -142,6 +147,7 @@ class SevenZipArchive {
         $testCmd = new TestArchive($this->getExecutableFile());
         $testCmd->setBaseArchiveFile($path);
         $testCmd->setPassword($this->getPassword());
+        $testCmd->setEncryptArchiveHeaders($this->getEncryptArchiveHeaders());
         $testCmd->execute();
         return $testCmd->getLastResult();
     }
@@ -154,6 +160,7 @@ class SevenZipArchive {
         $this->checkIfOpen();
         $listCmd = new ListArchive($this->getExecutableFile());
         $listCmd->setBaseArchiveFile($this->getArchivePath());
+        $listCmd->setEncryptArchiveHeaders($this->getEncryptArchiveHeaders());
         $listCmd->execute();
         return $listCmd->getLastResult();
     }
@@ -171,6 +178,7 @@ class SevenZipArchive {
         $addFileCmd->setFilename($filename);
         $addFileCmd->setLocalname($localname);
         $addFileCmd->setPassword($this->getPassword());
+        $addFileCmd->setEncryptArchiveHeaders($this->getEncryptArchiveHeaders());
         $addFileCmd->execute();
         return $addFileCmd->getLastResult();
     }
@@ -185,6 +193,7 @@ class SevenZipArchive {
         $this->checkIfOpen();
         $cmd = new AddFileFromString($this->getExecutableFile());
         $cmd->setPassword($this->getPassword());
+        $cmd->setEncryptArchiveHeaders($this->getEncryptArchiveHeaders());
         $cmd->setLocalname($localname);
         $cmd->setContents($contents);
         $cmd->setBaseArchiveFile($this->getArchivePath());
@@ -203,6 +212,7 @@ class SevenZipArchive {
         $cmd->setBaseArchiveFile($this->getArchivePath());
         $cmd->setName($name);
         $cmd->setPassword($this->getPassword());
+        $cmd->setEncryptArchiveHeaders($this->getEncryptArchiveHeaders());
         $cmd->execute();
         return $cmd->getLastOutput();
     }
@@ -226,6 +236,7 @@ class SevenZipArchive {
             $cmd->setEntries($entries);
         }
         $cmd->setPassword($this->getPassword());
+        $cmd->setEncryptArchiveHeaders($this->getEncryptArchiveHeaders());
         $cmd->execute();
         return $cmd->getLastResult();
     }
@@ -243,6 +254,7 @@ class SevenZipArchive {
         $this->checkIfOpen();
         $cmd = new Rename($this->getExecutableFile());
         $cmd->setPassword($this->getPassword());
+        $cmd->setEncryptArchiveHeaders($this->getEncryptArchiveHeaders());
         $cmd->setBaseArchiveFile($this->getArchivePath());
         $cmd->setName($name);
         $cmd->setNewname($newname);
@@ -285,6 +297,10 @@ class SevenZipArchive {
         throw new SevenZipException('Could not find 7-Zip executable!(' . $executableFile . ')');
     }
 
+    /**
+     * Set the base archive path
+     * @param string $archivePath
+     */
     public function setArchivePath($archivePath) {
         $this->archivePath = $archivePath;
     }

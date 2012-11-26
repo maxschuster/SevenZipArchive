@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Contains class ListArchive
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 
@@ -52,19 +57,21 @@ class ListArchive extends PasswordProtectedCommand {
     public function getLastResult() {
         $lastOutput = $this->getLastOutput();
         if (count($lastOutput) > 0) {
-            $fileRows = array_slice($lastOutput, 16, -2);
             $result = array();
-            foreach ($fileRows as $row) {
-                $date = DateTime::createFromFormat('Y-m-d H:i:s', substr($row, 0, 19));
-                $attr = substr($row, 20, 5);
-                $size = intval(trim(substr($row, 26, 12)));
-                $sizeCompressed = intval(trim(substr($row, 39, 12)));
-                $name = substr($row, 53);
-
-                if ($attr{0} == 'D') {
-                    $result[] = new SevenZipFolder($date, $attr, $size, $sizeCompressed, $name);
-                } else {
-                    $result[] = new SevenZipFile($date, $attr, $size, $sizeCompressed, $name);
+            foreach ($lastOutput as $row) {
+                $matches = array();
+                $regexResult = preg_match('/(\d{4}-\d{2}-\d{2}\s{1,}\d{2}:\d{2}:\d{2})\s{1,}(.{5})\s{1,}(\d{1,})\s{1,}(\d{1,})\s{1,}(.*)/', $row, $matches);
+                if ($regexResult) {
+                    $date = DateTime::createFromFormat('Y-m-d H:i:s', $matches[1]);
+                    $attr = $matches[2];
+                    $size = intval($matches[3]);
+                    $sizeCompressed = intval($matches[4]);
+                    $name = $matches[5];
+                    if ($attr{0} == 'D') {
+                        $result[] = new SevenZipFolder($date, $attr, $size, $sizeCompressed, $name);
+                    } else {
+                        $result[] = new SevenZipFile($date, $attr, $size, $sizeCompressed, $name);
+                    }
                 }
             }
             return $result;

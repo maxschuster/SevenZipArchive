@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Contains class SevenZipCommand
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 
@@ -27,7 +32,7 @@ use eu\maxschuster\sevenzip\exception\SevenZipException;
  * @copyright (c) 2012, Max Schuster
  * @package sevenziparchive
  */
-abstract class SevenZipCommand {
+abstract class SevenZipCommand implements CommandInterface {
     /*
      * Command Line Commands
      */

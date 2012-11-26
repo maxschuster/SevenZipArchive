@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Contains class GetFromName
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 

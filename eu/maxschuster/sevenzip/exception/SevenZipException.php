@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Contains class SevenZipException
+ * @package SevenZipArchive
+ */
+
 /*
  * Copyright 2012 Max Schuster 
  * 
